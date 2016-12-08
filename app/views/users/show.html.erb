@@ -5,11 +5,12 @@
  
 
 <strong>Appointments:</strong>
+
  <% if @user.user_type == 'mentor' %>
     <% @user.mentor_sessions.each do |time| %>
   <ul>
     <li>
-    <p>Start time: <%= time.start_time %>
+    Start time: <%= link_to time.start_time, user_appointment_path(time) %>
       End time: <%= time.end_time %>
     </p>
     </li>
@@ -19,7 +20,7 @@
     <% @user.study_sessions.each do |time| %>
     <ul>
       <li>
-      <p>Start time: <%= time.start_time %>
+      <p>Start time: <%= link_to time.start_time, user_appointment_path(time) %>
         End time: <%= time.end_time %>
       </p>
       </li>

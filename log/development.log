@@ -2165,8 +2165,11 @@ Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
 >>>>>>> 8e68c20c5e93725075b5db72f7313d3215522ffc
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 94abff96d097cc24929f507c96d2ed5cc2fee2ce
 =======
+=======
+>>>>>>> d74f438838681d3c14734aa7491c1a946779b3a1
 
 
 Started GET "/sessions/new" for 127.0.0.1 at 2016-12-08 11:28:37 -0800
@@ -3358,6 +3361,7 @@ Processing by Rails::InfoController#routes as HTML
   Rendered /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.3ms)
   Rendered /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-4.1.4/lib/rails/templates/rails/info/routes.html.erb within layouts/application (7.9ms)
 Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+<<<<<<< HEAD
 >>>>>>> 423fcc41fe8b03c19f244f49054779372e1712a8
 
 
@@ -3768,6 +3772,308 @@ NameError (Could not render layout: undefined local variable or method `applicat
   actionpack (4.1.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
   actionpack (4.1.4) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
   actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+=======
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2016-12-08 12:42:33 -0800
+Processing by Rails::InfoController#routes as HTML
+  Rendered /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.6ms)
+  Rendered /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.3ms)
+  Rendered /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-4.1.4/lib/rails/templates/rails/info/routes.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-08 12:42:37 -0800
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb (0.0ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2016-12-08 12:42:43 -0800
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 6ms
+
+SyntaxError (/Users/dawithailu/Desktop/dbc/phase3/newmenmen/Menmen/app/views/layouts/application.html.erb:5: syntax error, unexpected ',', expecting =>
+...'all', 'data-turbolinks-track', 'creative' => true );@output...
+...                               ^
+/Users/dawithailu/Desktop/dbc/phase3/newmenmen/Menmen/app/views/layouts/application.html.erb:5: syntax error, unexpected =>, expecting ')'
+...urbolinks-track', 'creative' => true );@output_buffer.safe_a...
+...                               ^):
+  app/views/layouts/application.html.erb:5: syntax error, unexpected ',', expecting =>
+  app/views/layouts/application.html.erb:5: syntax error, unexpected =>, expecting ')'
+
+
+  Rendered /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (54.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2016-12-08 12:43:56 -0800
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered sessions/new.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 11ms
+
+ActionView::Template::Error (Asset filtered out and will not be served: add `Rails.application.config.assets.precompile += %w( creative.css )` to `config/initializers/assets.rb` and restart your server):
+    2: <html>
+    3: <head>
+    4:   <title>MenMen</title>
+    5:   <%= stylesheet_link_tag    'creative', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'creative', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__2147978074072592806_70317112230260'
+
+
+  Rendered /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (36.8ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2016-12-08 12:46:53 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users"
+  Rendered sessions/new.html.erb within layouts/application (16.2ms)
+Completed 500 Internal Server Error in 37ms
+
+ActionView::Template::Error (Asset filtered out and will not be served: add `Rails.application.config.assets.precompile += %w( creative.css )` to `config/initializers/assets.rb` and restart your server):
+    2: <html>
+    3: <head>
+    4:   <title>MenMen</title>
+    5:   <%= stylesheet_link_tag    'creative', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'creative', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___2226465853329676975_70359558784840'
+
+
+  Rendered /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (37.3ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2016-12-08 12:46:56 -0800
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (Asset filtered out and will not be served: add `Rails.application.config.assets.precompile += %w( creative.css )` to `config/initializers/assets.rb` and restart your server):
+    2: <html>
+    3: <head>
+    4:   <title>MenMen</title>
+    5:   <%= stylesheet_link_tag    'creative', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'creative', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___2226465853329676975_70359558784840'
+
+
+  Rendered /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (38.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2016-12-08 12:47:52 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users"
+  Rendered sessions/new.html.erb within layouts/application (16.3ms)
+Completed 500 Internal Server Error in 46ms
+
+ActionView::Template::Error (Asset filtered out and will not be served: add `Rails.application.config.assets.precompile += %w( creative.js )` to `config/initializers/assets.rb` and restart your server):
+    3: <head>
+    4:   <title>MenMen</title>
+    5:   <%= stylesheet_link_tag    'creative', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'creative', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___1722173539846623022_70256305728220'
+
+
+  Rendered /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (37.1ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2016-12-08 12:48:16 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users"
+  Rendered sessions/new.html.erb within layouts/application (15.8ms)
+Completed 500 Internal Server Error in 40ms
+
+ActionView::Template::Error (Asset filtered out and will not be served: add `Rails.application.config.assets.precompile += %w( creative.js )` to `config/initializers/assets.rb` and restart your server):
+    3: <head>
+    4:   <title>MenMen</title>
+    5:   <%= stylesheet_link_tag    'creative', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'creative', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___112575165760634454_70245582025180'
+
+
+  Rendered /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (37.8ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2016-12-08 12:48:21 -0800
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (Asset filtered out and will not be served: add `Rails.application.config.assets.precompile += %w( creative.js )` to `config/initializers/assets.rb` and restart your server):
+    3: <head>
+    4:   <title>MenMen</title>
+    5:   <%= stylesheet_link_tag    'creative', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'creative', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___112575165760634454_70245582025180'
+
+
+  Rendered /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (39.4ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2016-12-08 12:48:42 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users"
+  Rendered sessions/new.html.erb within layouts/application (15.9ms)
+Completed 500 Internal Server Error in 45ms
+
+ActionView::Template::Error (Missing partial partials/__header with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/dawithailu/Desktop/dbc/phase3/newmenmen/Menmen/app/views"
+):
+     7:   <%= csrf_meta_tags %>
+     8: </head>
+     9: <body>
+    10: <%= render "partials/_header" %>
+    11: 
+    12: <%= yield %>
+    13: 
+  app/views/layouts/application.html.erb:10:in `_app_views_layouts_application_html_erb__4321005621685712403_70129625337960'
+
+
+  Rendered /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (38.1ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2016-12-08 12:50:02 -0800
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 14ms
+
+ActionView::Template::Error (Missing partial partials/__header with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/dawithailu/Desktop/dbc/phase3/newmenmen/Menmen/app/views"
+):
+     7:   <%= csrf_meta_tags %>
+     8: </head>
+     9: <body>
+    10: <%= render "partials/_header" %>
+    11: 
+    12: <%= yield %>
+    13: 
+  app/views/layouts/application.html.erb:10:in `_app_views_layouts_application_html_erb__4321005621685712403_70129625337960'
+
+
+  Rendered /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (36.8ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2016-12-08 12:51:30 -0800
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered sessions/new.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 14ms
+
+ActionView::Template::Error (The partial name (partials#_header) is not a valid Ruby identifier; make sure your partial name starts with a lowercase letter or underscore, and is followed by any combination of letters, numbers and underscores.):
+     7:   <%= csrf_meta_tags %>
+     8: </head>
+     9: <body>
+    10: <%= render "partials#_header" %>
+    11: 
+    12: <%= yield %>
+    13: 
+  app/views/layouts/application.html.erb:10:in `_app_views_layouts_application_html_erb__4321005621685712403_70129593108660'
+
+
+  Rendered /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (37.9ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2016-12-08 12:51:43 -0800
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 14ms
+
+ActionView::Template::Error (Missing partial /_users with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/dawithailu/Desktop/dbc/phase3/newmenmen/Menmen/app/views"
+):
+     7:   <%= csrf_meta_tags %>
+     8: </head>
+     9: <body>
+    10: <%= render users_path %>
+    11: 
+    12: <%= yield %>
+    13: 
+  app/views/layouts/application.html.erb:10:in `_app_views_layouts_application_html_erb__4321005621685712403_70129625567680'
+
+
+  Rendered /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (36.2ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2016-12-08 12:51:59 -0800
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/creative.css?body=1" for 127.0.0.1 at 2016-12-08 12:51:59 -0800
+
+
+Started GET "/assets/creative.js?body=1" for 127.0.0.1 at 2016-12-08 12:51:59 -0800
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2016-12-08 12:52:04 -0800
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2016-12-08 12:52:09 -0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gvSTnRDN3CX2Q0DEEuWewLzrjSg2pLLmVlCwrKbXiSA=", "email"=>"", "password"=>"[FILTERED]", "commit"=>"Submit"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = '' LIMIT 1
+Redirected to http://localhost:3000/sessions
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/sessions" for 127.0.0.1 at 2016-12-08 12:52:09 -0800
+
+ActionController::RoutingError (No route matches [GET] "/sessions"):
+  actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+>>>>>>> d74f438838681d3c14734aa7491c1a946779b3a1
   actionpack (4.1.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
   railties (4.1.4) lib/rails/rack/logger.rb:38:in `call_app'
   railties (4.1.4) lib/rails/rack/logger.rb:20:in `block in call'
@@ -3787,6 +4093,7 @@ NameError (Could not render layout: undefined local variable or method `applicat
   rack (1.5.5) lib/rack/lock.rb:17:in `call'
   rack (1.5.5) lib/rack/content_length.rb:14:in `call'
   rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+<<<<<<< HEAD
   /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
   /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
   /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
@@ -4714,3 +5021,342 @@ Processing by UsersController#show as HTML
   [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 47 LIMIT 1[0m
   Rendered partials/_header.html.erb (1.4ms)
 Completed 200 OK in 36ms (Views: 32.1ms | ActiveRecord: 2.7ms)
+=======
+  /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.2ms)
+  Rendered /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.8ms)
+  Rendered /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (61.5ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2016-12-08 12:52:19 -0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gvSTnRDN3CX2Q0DEEuWewLzrjSg2pLLmVlCwrKbXiSA=", "email"=>"norberto_murphy@balistrerinitzsche.info", "password"=>"[FILTERED]", "commit"=>"Submit"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'norberto_murphy@balistrerinitzsche.info' LIMIT 1[0m
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 68ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2016-12-08 12:52:19 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendered users/show.html.erb (0.2ms)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2016-12-08 12:52:24 -0800
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb (0.2ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2016-12-08 12:54:47 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendered users/show.html.erb (0.0ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-08 12:54:51 -0800
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb (0.0ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-08 12:54:54 -0800
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb (0.0ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2016-12-08 12:55:00 -0800
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered sessions/new.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 36ms
+
+ActionView::Template::Error (undefined local variable or method `_header' for #<#<Class:0x007f90a6d58f98>:0x007f90a53e0ae8>
+Did you mean?  headers):
+     7:   <%= csrf_meta_tags %>
+     8: </head>
+     9: <body>
+    10: <%= render _header %>
+    11: 
+    12: <%= yield %>
+    13: 
+  app/views/layouts/application.html.erb:10:in `_app_views_layouts_application_html_erb__4321005621685712403_70129612151900'
+
+
+  Rendered /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (36.7ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2016-12-08 12:55:17 -0800
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 17ms
+
+ActionView::Template::Error (Missing partial sessions/__header, application/__header with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/dawithailu/Desktop/dbc/phase3/newmenmen/Menmen/app/views"
+):
+     7:   <%= csrf_meta_tags %>
+     8: </head>
+     9: <body>
+    10: <%= render '_header' %>
+    11: 
+    12: <%= yield %>
+    13: 
+  app/views/layouts/application.html.erb:10:in `_app_views_layouts_application_html_erb__4321005621685712403_70129626812620'
+
+
+  Rendered /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (37.3ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2016-12-08 12:55:20 -0800
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 16ms
+
+ActionView::Template::Error (Missing partial sessions/__header, application/__header with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/dawithailu/Desktop/dbc/phase3/newmenmen/Menmen/app/views"
+):
+     7:   <%= csrf_meta_tags %>
+     8: </head>
+     9: <body>
+    10: <%= render '_header' %>
+    11: 
+    12: <%= yield %>
+    13: 
+  app/views/layouts/application.html.erb:10:in `_app_views_layouts_application_html_erb__4321005621685712403_70129626812620'
+
+
+  Rendered /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (37.1ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2016-12-08 12:57:12 -0800
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/creative.css?body=1" for 127.0.0.1 at 2016-12-08 12:57:12 -0800
+
+
+Started GET "/assets/creative.js?body=1" for 127.0.0.1 at 2016-12-08 12:57:12 -0800
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2016-12-08 12:59:29 -0800
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/creative.css?body=1" for 127.0.0.1 at 2016-12-08 12:59:29 -0800
+
+
+Started GET "/assets/creative.js?body=1" for 127.0.0.1 at 2016-12-08 12:59:29 -0800
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2016-12-08 12:59:31 -0800
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/creative.css?body=1" for 127.0.0.1 at 2016-12-08 12:59:31 -0800
+
+
+Started GET "/assets/creative.js?body=1" for 127.0.0.1 at 2016-12-08 12:59:31 -0800
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2016-12-08 12:59:43 -0800
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered sessions/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/creative.css?body=1" for 127.0.0.1 at 2016-12-08 12:59:43 -0800
+
+
+Started GET "/assets/creative.js?body=1" for 127.0.0.1 at 2016-12-08 12:59:43 -0800
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2016-12-08 12:59:45 -0800
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/creative.css?body=1" for 127.0.0.1 at 2016-12-08 12:59:45 -0800
+
+
+Started GET "/assets/creative.js?body=1" for 127.0.0.1 at 2016-12-08 12:59:45 -0800
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2016-12-08 13:00:21 -0800
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/creative.css?body=1" for 127.0.0.1 at 2016-12-08 13:00:21 -0800
+
+
+Started GET "/assets/creative.js?body=1" for 127.0.0.1 at 2016-12-08 13:00:21 -0800
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2016-12-08 13:00:23 -0800
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered sessions/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/creative.css?body=1" for 127.0.0.1 at 2016-12-08 13:00:23 -0800
+
+
+Started GET "/assets/creative.js?body=1" for 127.0.0.1 at 2016-12-08 13:00:23 -0800
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2016-12-08 14:29:21 -0800
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (4.9ms)[0m  SELECT "users".* FROM "users"
+  Rendered sessions/new.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 48ms (Views: 38.4ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/assets/creative.css?body=1" for 127.0.0.1 at 2016-12-08 14:29:22 -0800
+
+
+Started GET "/assets/creative.js?body=1" for 127.0.0.1 at 2016-12-08 14:29:22 -0800
+
+
+Started POST "/sessions" for 127.0.0.1 at 2016-12-08 14:29:30 -0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gvSTnRDN3CX2Q0DEEuWewLzrjSg2pLLmVlCwrKbXiSA=", "email"=>"london.dickinson@conroyokuneva.com", "password"=>"[FILTERED]", "commit"=>"Submit"}
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'london.dickinson@conroyokuneva.com' LIMIT 1[0m
+Redirected to http://localhost:3000/users/16
+Completed 302 Found in 68ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/users/16" for 127.0.0.1 at 2016-12-08 14:29:30 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"16"}
+  Rendered users/show.html.erb (0.2ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+=======
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mFeedback Load (18.2ms)[0m  SELECT "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."user_id" = $1  [["user_id", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+>>>>>>> 7a283cc0c9163cf7b16e7fc465ed7880ac673863
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-08 14:33:18 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb (1.3ms)
+Completed 200 OK in 18ms (Views: 9.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-12-08 14:33:26 -0800
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (436.6ms)
+  Rendered users/new.html.erb (440.5ms)
+Completed 200 OK in 452ms (Views: 444.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2016-12-08 14:33:34 -0800
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  Rendered sessions/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/creative.css?body=1" for 127.0.0.1 at 2016-12-08 14:33:34 -0800
+
+
+Started GET "/assets/creative.js?body=1" for 127.0.0.1 at 2016-12-08 14:33:34 -0800
+
+
+Started POST "/sessions" for 127.0.0.1 at 2016-12-08 14:33:43 -0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gvSTnRDN3CX2Q0DEEuWewLzrjSg2pLLmVlCwrKbXiSA=", "email"=>"jana@swiftdoyle.net", "password"=>"[FILTERED]", "commit"=>"Submit"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'jana@swiftdoyle.net' LIMIT 1[0m
+Redirected to http://localhost:3000/users/14
+Completed 302 Found in 71ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/users/14" for 127.0.0.1 at 2016-12-08 14:33:43 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 14]]
+  [1m[36mAppointment Load (0.4ms)[0m  [1mSELECT "appointments".* FROM "appointments"  WHERE "appointments"."student_id" = $1[0m  [["student_id", 14]]
+  [1m[35mFeedback Load (1.3ms)[0m  SELECT "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."user_id" = $1  [["user_id", 14]]
+  Rendered users/show.html.erb (53.4ms)
+Completed 200 OK in 59ms (Views: 52.4ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/users/14" for 127.0.0.1 at 2016-12-08 14:40:53 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 14]]
+  [1m[35mAppointment Load (0.2ms)[0m  SELECT "appointments".* FROM "appointments"  WHERE "appointments"."student_id" = $1  [["student_id", 14]]
+  [1m[36mFeedback Load (0.2ms)[0m  [1mSELECT "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."user_id" = $1[0m  [["user_id", 14]]
+  Rendered users/show.html.erb (2.5ms)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/14" for 127.0.0.1 at 2016-12-08 14:40:55 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 14]]
+  [1m[36mAppointment Load (0.2ms)[0m  [1mSELECT "appointments".* FROM "appointments"  WHERE "appointments"."student_id" = $1[0m  [["student_id", 14]]
+  [1m[35mFeedback Load (0.2ms)[0m  SELECT "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."user_id" = $1  [["user_id", 14]]
+  Rendered users/show.html.erb (1.8ms)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/14" for 127.0.0.1 at 2016-12-08 14:41:24 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 14]]
+  [1m[35mAppointment Load (0.2ms)[0m  SELECT "appointments".* FROM "appointments"  WHERE "appointments"."student_id" = $1  [["student_id", 14]]
+  Rendered users/show.html.erb (8.9ms)
+Completed 500 Internal Server Error in 13ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"appointments", :format=>nil, :id=>nil, :user_id=>#<Appointment id: 6, mentor_id: 19, student_id: 14, topic: "Salvia bitters tote bag literally kinfolk venmo ga...", start_time: "2016-12-08 14:19:10", end_time: "2016-12-08 15:45:57", created_at: "2016-12-08 19:07:39", updated_at: "2016-12-08 19:07:39">} missing required keys: [:id]):
+    20:     <% @user.study_sessions.each do |time| %>
+    21:     <ul>
+    22:       <li>
+    23:       <p>Start time: <%= link_to time.start_time, user_appointment_path(time) %>
+    24:         End time: <%= time.end_time %>
+    25:       </p>
+    26:       </li>
+  app/views/users/show.html.erb:23:in `block in _app_views_users_show_html_erb___1815629414208670235_70224065235100'
+  app/views/users/show.html.erb:20:in `_app_views_users_show_html_erb___1815629414208670235_70224065235100'
+
+
+  Rendered /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (40.7ms)
+>>>>>>> d74f438838681d3c14734aa7491c1a946779b3a1
