@@ -2160,6 +2160,7 @@ Processing by UsersController#index as HTML
   Rendered users/index.html.erb (0.0ms)
 Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
 >>>>>>> 8e68c20c5e93725075b5db72f7313d3215522ffc
+<<<<<<< HEAD
 
 
 Started GET "/sessions/new" for 127.0.0.1 at 2016-12-08 11:28:37 -0800
@@ -3909,3 +3910,11 @@ Processing by UsersController#show as HTML
   Parameters: {"id"=>"16"}
   Rendered users/show.html.erb (0.2ms)
 Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+=======
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mFeedback Load (18.2ms)[0m  SELECT "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."user_id" = $1  [["user_id", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+>>>>>>> 7a283cc0c9163cf7b16e7fc465ed7880ac673863

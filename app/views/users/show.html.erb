@@ -1,0 +1,36 @@
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+ 
+
+<strong>Appointments:</strong>
+ <% if @user.user_type == 'mentor' %>
+    <% @user.mentor_sessions.each do |time| %>
+  <ul>
+    <li>
+    <p>Start time: <%= time.start_time %>
+      End time: <%= time.end_time %>
+    </p>
+    </li>
+  </ul>
+    <% end %>
+  <% else %>
+    <% @user.study_sessions.each do |time| %>
+    <ul>
+      <li>
+      <p>Start time: <%= time.start_time %>
+        End time: <%= time.end_time %>
+      </p>
+      </li>
+    </ul>
+    <% end %>
+  <% end %>
+
+
+<strong>Feedback:</strong>
+<% @user.feedbacks.each do |feedback| %>
+  <ul>
+    <li><p><%= feedback.body %></p></li>
+  </ul>
+<% end %>
