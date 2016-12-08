@@ -2164,6 +2164,7 @@ Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
 =======
 >>>>>>> 8e68c20c5e93725075b5db72f7313d3215522ffc
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 94abff96d097cc24929f507c96d2ed5cc2fee2ce
 =======
 
@@ -3373,3 +3374,11 @@ Processing by Rails::InfoController#routes as HTML
   Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.2ms)
   Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-4.1.4/lib/rails/templates/rails/info/routes.html.erb within layouts/application (18.3ms)
 Completed 200 OK in 35ms (Views: 34.2ms | ActiveRecord: 0.0ms)
+=======
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mFeedback Load (18.2ms)[0m  SELECT "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."user_id" = $1  [["user_id", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+>>>>>>> d610d64270a7098f2c7fd9e4c48214b19bea3b59
