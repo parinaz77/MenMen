@@ -1,4 +1,4 @@
-class UsersController < ActionController::Base
+class UsersController < ApplicationController
 	before_action :user_params, only: [:create]
 
 	def index
