@@ -5,5 +5,7 @@ Rails.application.routes.draw do
     resources :appointments
     resources :feedbacks, except: [:edit, :delete]
   end
+
+  resources :sessions, only: [:new,:create,:destroy]
   
 end
