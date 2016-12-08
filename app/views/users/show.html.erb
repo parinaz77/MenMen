@@ -1,0 +1,37 @@
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+ 
+
+<strong>Appointments:</strong>
+
+ <% if @user.user_type == 'mentor' %>
+    <% @user.mentor_sessions.each do |time| %>
+  <ul>
+    <li>
+    Start time: <%= link_to time.start_time, user_appointment_path(time) %>
+      End time: <%= time.end_time %>
+    </p>
+    </li>
+  </ul>
+    <% end %>
+  <% else %>
+    <% @user.study_sessions.each do |time| %>
+    <ul>
+      <li>
+      <p>Start time: <%= link_to time.start_time, user_appointment_path(time) %>
+        End time: <%= time.end_time %>
+      </p>
+      </li>
+    </ul>
+    <% end %>
+  <% end %>
+
+
+<strong>Feedback:</strong>
+<% @user.feedbacks.each do |feedback| %>
+  <ul>
+    <li><p><%= feedback.body %></p></li>
+  </ul>
+<% end %>
