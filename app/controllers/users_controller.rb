@@ -1,4 +1,6 @@
 class UsersController < ActionController::Base
+
+	layout "application"
 	before_action :user_params, only: [:create]
 
 	def new
@@ -17,7 +19,8 @@ def create
 	@user = User.new(user_params)
 
 	if @user.save
-		redirect_to @user
+		session[:user_id]=@user.id
+		redirect_to user_path(@user)
 	else
 		flash[:alert] = "Please fill out all fields"
 		render 'new'
