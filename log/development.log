@@ -3358,3 +3358,18 @@ Processing by Rails::InfoController#routes as HTML
   Rendered /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-4.1.4/lib/rails/templates/rails/info/routes.html.erb within layouts/application (7.9ms)
 Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.0ms)
 >>>>>>> 423fcc41fe8b03c19f244f49054779372e1712a8
+
+
+Started GET "/rails/info" for 127.0.0.1 at 2016-12-08 12:23:37 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::InfoController#index as HTML
+Redirected to http://localhost:3000/rails/info/routes
+Completed 302 Found in 10ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2016-12-08 12:23:37 -0800
+Processing by Rails::InfoController#routes as HTML
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.8ms)
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.2ms)
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-4.1.4/lib/rails/templates/rails/info/routes.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 35ms (Views: 34.2ms | ActiveRecord: 0.0ms)
