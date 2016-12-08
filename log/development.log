@@ -1,0 +1,1183 @@
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-07 21:12:50 -0800
+
+ActiveRecord::NoDatabaseError (FATAL:  database "MenMen_development" does not exist
+Run `$ bin/rake db:create db:migrate` to create your database):
+  activerecord (4.1.4) lib/active_record/connection_adapters/postgresql_adapter.rb:898:in `rescue in connect'
+  activerecord (4.1.4) lib/active_record/connection_adapters/postgresql_adapter.rb:888:in `connect'
+  activerecord (4.1.4) lib/active_record/connection_adapters/postgresql_adapter.rb:568:in `initialize'
+  activerecord (4.1.4) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `new'
+  activerecord (4.1.4) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `postgresql_connection'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:435:in `new_connection'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:445:in `checkout_new_connection'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:416:in `acquire_connection'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:351:in `block in checkout'
+  /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/2.3.0/monitor.rb:214:in `mon_synchronize'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:350:in `checkout'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:265:in `block in connection'
+  /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/2.3.0/monitor.rb:214:in `mon_synchronize'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:264:in `connection'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:541:in `retrieve_connection'
+  activerecord (4.1.4) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.1.4) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.1.4) lib/active_record/migration.rb:388:in `check_pending!'
+  activerecord (4.1.4) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.4) lib/rails/engine.rb:514:in `call'
+  railties (4.1.4) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (59.2ms)
+  [1m[36m (426.8ms)[0m  [1mCREATE DATABASE "MenMen_development" ENCODING = 'unicode'[0m
+  [1m[35m (8.9ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) 
+  [1m[36m (1.5ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateUsers (20161207230251)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (7.1ms)[0m  CREATE TABLE "users" ("id" serial primary key, "name" character varying(255), "email" character varying(255), "password_digest" character varying(255), "telephone" character varying(255), "avatar" character varying(255), "user_type" character varying(255), "phase" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (2.5ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20161207230251"]]
+  [1m[35m (0.8ms)[0m  COMMIT
+Migrating to CreateAppointments (20161207230723)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (2.0ms)[0m  CREATE TABLE "appointments" ("id" serial primary key, "mentor_id" integer, "student_id" integer, "topic" character varying(255), "start_time" timestamp, "end_time" timestamp, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20161207230723"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Migrating to CreateFeedbacks (20161207231152)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (3.8ms)[0m  CREATE TABLE "feedbacks" ("id" serial primary key, "appointment_id" integer, "user_id" integer, "body" text, "rating" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20161207231152"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("avatar", "created_at", "email", "name", "password_digest", "phase", "telephone", "updated_at", "user_type") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["avatar", "https://robohash.org/recusandaesuntaccusantium.png?size=300x300&set=set1"], ["created_at", "2016-12-08 05:13:44.489856"], ["email", "uriel@gibson.org"], ["name", "Mr. Jeffrey Oberbrunner"], ["password_digest", "$2a$10$pSlQ1ekJv4LU0uMTaL630uFUGwAgoLsg29fWD6jgg6zmzFqimmzti"], ["phase", 3], ["telephone", "1-132-566-1176"], ["updated_at", "2016-12-08 05:13:44.489856"], ["user_type", "student"]]
+  [1m[35m (3.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("avatar", "created_at", "email", "name", "password_digest", "phase", "telephone", "updated_at", "user_type") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["avatar", "https://robohash.org/atqueeosquo.png?size=300x300&set=set1"], ["created_at", "2016-12-08 05:13:44.569524"], ["email", "charley.kuhic@leffler.co"], ["name", "Dr. Wilmer MacGyver"], ["password_digest", "$2a$10$D6ilznVfyvtwKgN7n76ELOEqMmKDgeEzEOgNVYm9qciUkaVdP/owm"], ["phase", 3], ["telephone", "1-758-883-8474"], ["updated_at", "2016-12-08 05:13:44.569524"], ["user_type", "student"]]
+  [1m[36m (1.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("avatar", "created_at", "email", "name", "password_digest", "phase", "telephone", "updated_at", "user_type") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["avatar", "https://robohash.org/eumvoluptatemaccusamus.png?size=300x300&set=set1"], ["created_at", "2016-12-08 05:13:44.636837"], ["email", "ro.heller@langosh.com"], ["name", "Reilly Reichel II"], ["password_digest", "$2a$10$IBNHzqCtt2t80LWFlC2BfOmB91bC9IoBpv4tItVrgZ1G2uaHEbBF6"], ["phase", 2], ["telephone", "681-496-9325"], ["updated_at", "2016-12-08 05:13:44.636837"], ["user_type", "student"]]
+  [1m[35m (0.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("avatar", "created_at", "email", "name", "password_digest", "phase", "telephone", "updated_at", "user_type") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["avatar", "https://robohash.org/eaqueautaspernatur.png?size=300x300&set=set1"], ["created_at", "2016-12-08 05:13:44.706738"], ["email", "charlotte.hintz@emmerich.name"], ["name", "Jaquan Waters"], ["password_digest", "$2a$10$bWoskK1vc4Tamle8T6bNc.6sEcUhcDpnf9ag85io43N4PmyI4Iyum"], ["phase", 2], ["telephone", "1-560-410-7375"], ["updated_at", "2016-12-08 05:13:44.706738"], ["user_type", "student"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("avatar", "created_at", "email", "name", "password_digest", "phase", "telephone", "updated_at", "user_type") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["avatar", "https://robohash.org/ipsaenimdolorum.png?size=300x300&set=set1"], ["created_at", "2016-12-08 05:13:44.776390"], ["email", "gaylord_toy@glover.com"], ["name", "Magdalena Bins"], ["password_digest", "$2a$10$USdk/0AUuexTAlGIFnDvI.xKGgmX1U9/IteKLEpR3wVnFBuzUHX5C"], ["phase", 3], ["telephone", "300.350.4589"], ["updated_at", "2016-12-08 05:13:44.776390"], ["user_type", "student"]]
+  [1m[35m (0.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("avatar", "created_at", "email", "name", "password_digest", "phase", "telephone", "updated_at", "user_type") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["avatar", "https://robohash.org/saepeenimmagni.png?size=300x300&set=set1"], ["created_at", "2016-12-08 05:13:44.844622"], ["email", "nella@orn.org"], ["name", "Ewald Breitenberg V"], ["password_digest", "$2a$10$.G5v/z3oSrkxGRY6kaUhIODFANCB44agdBZJ1OBTOrGZF5wzlEP/u"], ["phase", 1], ["telephone", "506-071-5112"], ["updated_at", "2016-12-08 05:13:44.844622"], ["user_type", "student"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("avatar", "created_at", "email", "name", "password_digest", "phase", "telephone", "updated_at", "user_type") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["avatar", "https://robohash.org/autemestaut.png?size=300x300&set=set1"], ["created_at", "2016-12-08 05:13:44.916435"], ["email", "bobbie.stamm@bashirian.io"], ["name", "Valerie Effertz IV"], ["password_digest", "$2a$10$UDK67SDAWz7SDypFz2UpP.wZO8gP4G1Ok7tXFtjAniHFygOp2Qi6u"], ["phase", 1], ["telephone", "118.576.9584"], ["updated_at", "2016-12-08 05:13:44.916435"], ["user_type", "student"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("avatar", "created_at", "email", "name", "password_digest", "phase", "telephone", "updated_at", "user_type") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["avatar", "https://robohash.org/aspernaturipsumsapiente.png?size=300x300&set=set1"], ["created_at", "2016-12-08 05:13:44.985888"], ["email", "royce_grimes@conn.com"], ["name", "Elyse Brekke"], ["password_digest", "$2a$10$uVTIwpt79D28X7Ke4vxbr.v3JT1He3ZvRhbmdfzHk11S4F5PTcVpm"], ["phase", 3], ["telephone", "1-710-067-3948"], ["updated_at", "2016-12-08 05:13:44.985888"], ["user_type", "student"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("avatar", "created_at", "email", "name", "password_digest", "phase", "telephone", "updated_at", "user_type") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["avatar", "https://robohash.org/hicetmollitia.png?size=300x300&set=set1"], ["created_at", "2016-12-08 05:13:45.050072"], ["email", "ubaldo@hoppe.info"], ["name", "Jaydon Hilll"], ["password_digest", "$2a$10$H9For9vVONX9TLxaPCOZjuTafssYMS2DI7osYuow/OqgqStbjJq8a"], ["phase", 1], ["telephone", "1-666-610-6575"], ["updated_at", "2016-12-08 05:13:45.050072"], ["user_type", "student"]]
+  [1m[35m (0.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("avatar", "created_at", "email", "name", "password_digest", "phase", "telephone", "updated_at", "user_type") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["avatar", "https://robohash.org/idetaperiam.png?size=300x300&set=set1"], ["created_at", "2016-12-08 05:13:45.118641"], ["email", "bart.miller@fay.biz"], ["name", "Lacey Hermiston"], ["password_digest", "$2a$10$Ir6RrsAQhzzpcHzGHRpxTexPSjsWTg6T8v4XmaGIAWmBYzWix8/M2"], ["phase", 2], ["telephone", "1-222-892-4266"], ["updated_at", "2016-12-08 05:13:45.118641"], ["user_type", "student"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("avatar", "created_at", "email", "name", "password_digest", "phase", "telephone", "updated_at", "user_type") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["avatar", "https://robohash.org/molestiaeilloomnis.png?size=300x300&set=set1"], ["created_at", "2016-12-08 05:13:45.187554"], ["email", "cayla.conn@padberg.info"], ["name", "Clotilde Ledner"], ["password_digest", "$2a$10$GCw9pV6S5xS.ge0rLxzJXerCmlFnFcYjHwPdFIlujIoaKn7jYdtz2"], ["phase", 1], ["telephone", "336.332.7265"], ["updated_at", "2016-12-08 05:13:45.187554"], ["user_type", "student"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("avatar", "created_at", "email", "name", "password_digest", "phase", "telephone", "updated_at", "user_type") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["avatar", "https://robohash.org/nobisaliquameos.png?size=300x300&set=set1"], ["created_at", "2016-12-08 05:13:45.254158"], ["email", "ashlynn.ortiz@torphoppe.com"], ["name", "Casper Morissette"], ["password_digest", "$2a$10$rJ1k2lnrwcl0G.hq3EqK3ucyBu2fVU3Cot0GpLsXFokTtawiVtCVG"], ["phase", 2], ["telephone", "(996) 590-2603"], ["updated_at", "2016-12-08 05:13:45.254158"], ["user_type", "student"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("avatar", "created_at", "email", "name", "password_digest", "phase", "telephone", "updated_at", "user_type") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["avatar", "https://robohash.org/quisquamnondolor.png?size=300x300&set=set1"], ["created_at", "2016-12-08 05:13:45.325182"], ["email", "vickie.collier@prohaska.name"], ["name", "Anika Bayer"], ["password_digest", "$2a$10$Em0G0gvYNwsoPpzQcxt8yuMC.DqDr1XrCZu0jsiUXBqLhRJw/d8bu"], ["phase", 3], ["telephone", "371.337.6042"], ["updated_at", "2016-12-08 05:13:45.325182"], ["user_type", "student"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("avatar", "created_at", "email", "name", "password_digest", "phase", "telephone", "updated_at", "user_type") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["avatar", "https://robohash.org/reiciendisfacilisnam.png?size=300x300&set=set1"], ["created_at", "2016-12-08 05:13:45.392971"], ["email", "concepcion_ward@bayer.info"], ["name", "Albertha West"], ["password_digest", "$2a$10$boFdH9WYnhNotDfQ6NiZ8eFh/tyE493hgLsmVrd0XDiMptYbvWihG"], ["phase", 2], ["telephone", "(977) 846-0529"], ["updated_at", "2016-12-08 05:13:45.392971"], ["user_type", "student"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("avatar", "created_at", "email", "name", "password_digest", "phase", "telephone", "updated_at", "user_type") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["avatar", "https://robohash.org/maximeutquod.png?size=300x300&set=set1"], ["created_at", "2016-12-08 05:13:45.461840"], ["email", "ewell@weimannbashirian.name"], ["name", "Demarco Wiegand"], ["password_digest", "$2a$10$uI.VUF6Q8RAi9K5BKWIkFueLNzKu/n4W2BMhcU/GT/QeVBKMbD.9G"], ["phase", 1], ["telephone", "1-231-769-5684"], ["updated_at", "2016-12-08 05:13:45.461840"], ["user_type", "student"]]
+  [1m[35m (0.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("avatar", "created_at", "email", "name", "password_digest", "phase", "telephone", "updated_at", "user_type") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["avatar", "https://robohash.org/saepeexercitationemsit.png?size=300x300&set=set1"], ["created_at", "2016-12-08 05:13:45.534304"], ["email", "tyrique_dickinson@grimes.net"], ["name", "Chanel Metz"], ["password_digest", "$2a$10$Zgh0AlovPmxFQtCSJO01YueOo8zhqikvwA.RXnDOQMUzn2vfdYBNy"], ["phase", 2], ["telephone", "562-762-9483"], ["updated_at", "2016-12-08 05:13:45.534304"], ["user_type", "mentor"]]
+  [1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("avatar", "created_at", "email", "name", "password_digest", "phase", "telephone", "updated_at", "user_type") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["avatar", "https://robohash.org/optioprovidentnon.png?size=300x300&set=set1"], ["created_at", "2016-12-08 05:13:45.606754"], ["email", "mario.mills@dickiturner.com"], ["name", "Citlalli Bernier"], ["password_digest", "$2a$10$K2MlRCnWhbfxH.ZKpBYX1et2DoiES6fN6DVAHkiFOa37Tu3uCEWqq"], ["phase", 1], ["telephone", "899.406.8063"], ["updated_at", "2016-12-08 05:13:45.606754"], ["user_type", "mentor"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("avatar", "created_at", "email", "name", "password_digest", "phase", "telephone", "updated_at", "user_type") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["avatar", "https://robohash.org/asperioresdelectusautem.png?size=300x300&set=set1"], ["created_at", "2016-12-08 05:13:45.671612"], ["email", "gay.toy@larkin.net"], ["name", "Roxanne Swift"], ["password_digest", "$2a$10$qU/iqbBAPFS3Cb9J39Nr2OvHnecCy5YFD6NGk5w0JPi1r/F8fsnHW"], ["phase", 1], ["telephone", "781.096.9837"], ["updated_at", "2016-12-08 05:13:45.671612"], ["user_type", "mentor"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("avatar", "created_at", "email", "name", "password_digest", "phase", "telephone", "updated_at", "user_type") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["avatar", "https://robohash.org/expeditasapientequis.png?size=300x300&set=set1"], ["created_at", "2016-12-08 05:13:45.739215"], ["email", "elmer@quitzonolson.io"], ["name", "Neha Parker"], ["password_digest", "$2a$10$OyYKYAYZWudequtOe8Xa.uJbWWlLi2ViTKGDuSQGA9PaYZ95lttRK"], ["phase", 3], ["telephone", "1-455-070-1215"], ["updated_at", "2016-12-08 05:13:45.739215"], ["user_type", "mentor"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("avatar", "created_at", "email", "name", "password_digest", "phase", "telephone", "updated_at", "user_type") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["avatar", "https://robohash.org/quaemolestiaepraesentium.png?size=300x300&set=set1"], ["created_at", "2016-12-08 05:13:45.809097"], ["email", "lyla_eichmann@quigley.biz"], ["name", "Eleanora Walker III"], ["password_digest", "$2a$10$IAA6EZDiRp3uLTvbkSq6Fe7F.tvNmlAbPFFgBh7zh8ZcQA5gokDKC"], ["phase", 3], ["telephone", "(810) 738-4637"], ["updated_at", "2016-12-08 05:13:45.809097"], ["user_type", "mentor"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "appointments" ("created_at", "end_time", "mentor_id", "start_time", "student_id", "topic", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2016-12-08 05:13:45.825421"], ["end_time", "2016-12-06 14:52:26.000000"], ["mentor_id", 17], ["start_time", "2016-12-07 12:44:50.000000"], ["student_id", 1], ["topic", "Williamsburg loko chia hella chillwave asymmetrical art party carry."], ["updated_at", "2016-12-08 05:13:45.825421"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "appointments" ("created_at", "end_time", "mentor_id", "start_time", "student_id", "topic", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2016-12-08 05:13:45.828897"], ["end_time", "2016-12-07 03:20:31.000000"], ["mentor_id", 16], ["start_time", "2016-12-07 08:54:48.000000"], ["student_id", 9], ["topic", "Organic hella meh portland brunch venmo sriracha keytar."], ["updated_at", "2016-12-08 05:13:45.828897"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "appointments" ("created_at", "end_time", "mentor_id", "start_time", "student_id", "topic", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2016-12-08 05:13:45.831307"], ["end_time", "2016-12-08 00:32:14.000000"], ["mentor_id", 19], ["start_time", "2016-12-07 06:41:05.000000"], ["student_id", 1], ["topic", "Loko freegan wolf kickstarter kinfolk fap swag chia post-ironic."], ["updated_at", "2016-12-08 05:13:45.831307"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "appointments" ("created_at", "end_time", "mentor_id", "start_time", "student_id", "topic", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2016-12-08 05:13:45.833922"], ["end_time", "2016-12-07 17:11:44.000000"], ["mentor_id", 19], ["start_time", "2016-12-06 13:10:06.000000"], ["student_id", 6], ["topic", "Roof meh scenester authentic venmo poutine selfies tofu beard."], ["updated_at", "2016-12-08 05:13:45.833922"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "appointments" ("created_at", "end_time", "mentor_id", "start_time", "student_id", "topic", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2016-12-08 05:13:45.836408"], ["end_time", "2016-12-08 07:52:57.000000"], ["mentor_id", 16], ["start_time", "2016-12-06 22:33:33.000000"], ["student_id", 4], ["topic", "Goth sartorial normcore vinegar post-ironic drinking tote bag."], ["updated_at", "2016-12-08 05:13:45.836408"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "appointments" ("created_at", "end_time", "mentor_id", "start_time", "student_id", "topic", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2016-12-08 05:13:45.839025"], ["end_time", "2016-12-06 16:12:30.000000"], ["mentor_id", 19], ["start_time", "2016-12-08 07:42:28.000000"], ["student_id", 6], ["topic", "Lumbersexual heirloom cleanse ennui tote bag +1 polaroid health."], ["updated_at", "2016-12-08 05:13:45.839025"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "appointments" ("created_at", "end_time", "mentor_id", "start_time", "student_id", "topic", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2016-12-08 05:13:45.841562"], ["end_time", "2016-12-07 08:39:30.000000"], ["mentor_id", 19], ["start_time", "2016-12-07 05:43:10.000000"], ["student_id", 13], ["topic", "Salvia irony listicle cronut trust fund 3 wolf moon schlitz tofu."], ["updated_at", "2016-12-08 05:13:45.841562"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "appointments" ("created_at", "end_time", "mentor_id", "start_time", "student_id", "topic", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2016-12-08 05:13:45.844329"], ["end_time", "2016-12-08 06:57:46.000000"], ["mentor_id", 20], ["start_time", "2016-12-08 01:12:02.000000"], ["student_id", 15], ["topic", "Art party tattooed chia freegan yr +1 hoodie helvetica."], ["updated_at", "2016-12-08 05:13:45.844329"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "appointments" ("created_at", "end_time", "mentor_id", "start_time", "student_id", "topic", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2016-12-08 05:13:45.846885"], ["end_time", "2016-12-06 17:55:25.000000"], ["mentor_id", 20], ["start_time", "2016-12-07 22:44:44.000000"], ["student_id", 11], ["topic", "Venmo pour-over 8-bit aesthetic wolf fashion axe brunch mumblecore five dollar toast."], ["updated_at", "2016-12-08 05:13:45.846885"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "appointments" ("created_at", "end_time", "mentor_id", "start_time", "student_id", "topic", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2016-12-08 05:13:45.849515"], ["end_time", "2016-12-06 18:59:57.000000"], ["mentor_id", 19], ["start_time", "2016-12-08 04:52:31.000000"], ["student_id", 4], ["topic", "Marfa chicharrones put a bird on it sriracha loko portland bitters."], ["updated_at", "2016-12-08 05:13:45.849515"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "appointments" ("created_at", "end_time", "mentor_id", "start_time", "student_id", "topic", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2016-12-08 05:13:45.852177"], ["end_time", "2016-12-06 10:17:35.000000"], ["mentor_id", 16], ["start_time", "2016-12-07 20:04:45.000000"], ["student_id", 6], ["topic", "Slow-carb swag twee schlitz organic."], ["updated_at", "2016-12-08 05:13:45.852177"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "appointments" ("created_at", "end_time", "mentor_id", "start_time", "student_id", "topic", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2016-12-08 05:13:45.854809"], ["end_time", "2016-12-07 13:54:09.000000"], ["mentor_id", 19], ["start_time", "2016-12-06 10:19:21.000000"], ["student_id", 14], ["topic", "Skateboard offal pinterest fixie kombucha."], ["updated_at", "2016-12-08 05:13:45.854809"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "appointments" ("created_at", "end_time", "mentor_id", "start_time", "student_id", "topic", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2016-12-08 05:13:45.857387"], ["end_time", "2016-12-07 21:59:07.000000"], ["mentor_id", 20], ["start_time", "2016-12-07 18:22:16.000000"], ["student_id", 13], ["topic", "Before they sold out vinegar chia brunch helvetica try-hard pitchfork kitsch."], ["updated_at", "2016-12-08 05:13:45.857387"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "appointments" ("created_at", "end_time", "mentor_id", "start_time", "student_id", "topic", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2016-12-08 05:13:45.860062"], ["end_time", "2016-12-07 04:27:13.000000"], ["mentor_id", 16], ["start_time", "2016-12-06 18:50:05.000000"], ["student_id", 1], ["topic", "Synth tumblr sustainable carry goth twee pop-up vice helvetica."], ["updated_at", "2016-12-08 05:13:45.860062"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "appointments" ("created_at", "end_time", "mentor_id", "start_time", "student_id", "topic", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2016-12-08 05:13:45.862751"], ["end_time", "2016-12-06 21:30:04.000000"], ["mentor_id", 16], ["start_time", "2016-12-06 20:20:11.000000"], ["student_id", 5], ["topic", "Food truck austin fanny pack shabby chic blue bottle leggings authentic."], ["updated_at", "2016-12-08 05:13:45.862751"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "appointments" ("created_at", "end_time", "mentor_id", "start_time", "student_id", "topic", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2016-12-08 05:13:45.865607"], ["end_time", "2016-12-07 21:30:39.000000"], ["mentor_id", 19], ["start_time", "2016-12-06 09:56:19.000000"], ["student_id", 14], ["topic", "Chicharrones pour-over cliche godard."], ["updated_at", "2016-12-08 05:13:45.865607"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "appointments" ("created_at", "end_time", "mentor_id", "start_time", "student_id", "topic", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2016-12-08 05:13:45.868326"], ["end_time", "2016-12-07 00:09:18.000000"], ["mentor_id", 19], ["start_time", "2016-12-07 06:18:45.000000"], ["student_id", 3], ["topic", "Before they sold out neutra lo-fi kitsch fixie keytar pork belly crucifix."], ["updated_at", "2016-12-08 05:13:45.868326"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "appointments" ("created_at", "end_time", "mentor_id", "start_time", "student_id", "topic", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2016-12-08 05:13:45.871316"], ["end_time", "2016-12-07 16:37:04.000000"], ["mentor_id", 16], ["start_time", "2016-12-07 00:02:52.000000"], ["student_id", 7], ["topic", "Leggings taxidermy keffiyeh shabby chic echo quinoa art party pour-over fingerstache."], ["updated_at", "2016-12-08 05:13:45.871316"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "appointments" ("created_at", "end_time", "mentor_id", "start_time", "student_id", "topic", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2016-12-08 05:13:45.874176"], ["end_time", "2016-12-08 03:29:04.000000"], ["mentor_id", 20], ["start_time", "2016-12-08 04:46:22.000000"], ["student_id", 8], ["topic", "Messenger bag venmo etsy cray chartreuse."], ["updated_at", "2016-12-08 05:13:45.874176"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "appointments" ("created_at", "end_time", "mentor_id", "start_time", "student_id", "topic", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2016-12-08 05:13:45.877084"], ["end_time", "2016-12-08 04:32:16.000000"], ["mentor_id", 18], ["start_time", "2016-12-08 04:03:37.000000"], ["student_id", 1], ["topic", "+1 forage kitsch before they sold out echo quinoa cold-pressed umami disrupt."], ["updated_at", "2016-12-08 05:13:45.877084"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mAppointment Load (0.2ms)[0m  SELECT  "appointments".* FROM "appointments"  WHERE "appointments"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["appointment_id", 0], ["body", "Vegan forage food truck hella. Taxidermy narwhal tilde beard knausgaard wayfarers gluten-free helvetica. Seitan gentrify disrupt hammock vice forage actually."], ["created_at", "2016-12-08 05:13:45.890109"], ["rating", 4], ["updated_at", "2016-12-08 05:13:45.890109"], ["user_id", 17]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["appointment_id", 0], ["body", "Quinoa flexitarian before they sold out heirloom organic blue bottle celiac kale chips. Venmo listicle tofu knausgaard food truck shoreditch ethical ennui. Cray pinterest semiotics meggings kombucha."], ["created_at", "2016-12-08 05:13:45.892846"], ["rating", 2], ["updated_at", "2016-12-08 05:13:45.892846"], ["user_id", 1]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mAppointment Load (0.2ms)[0m  [1mSELECT  "appointments".* FROM "appointments"  WHERE "appointments"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["appointment_id", 1], ["body", "8-bit lomo distillery master aesthetic art party. Microdosing umami mumblecore. Xoxo normcore cronut gentrify vhs hammock carry. Irony bushwick tousled meditation banh mi farm-to-table normcore deep v."], ["created_at", "2016-12-08 05:13:45.896111"], ["rating", 5], ["updated_at", "2016-12-08 05:13:45.896111"], ["user_id", 16]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["appointment_id", 1], ["body", "Everyday skateboard selfies. Kale chips thundercats offal keffiyeh synth church-key. Schlitz lo-fi kitsch wolf ugh +1. Flexitarian tilde goth. Synth franzen drinking austin food truck ethical before they sold out."], ["created_at", "2016-12-08 05:13:45.898407"], ["rating", 5], ["updated_at", "2016-12-08 05:13:45.898407"], ["user_id", 9]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mAppointment Load (0.2ms)[0m  SELECT  "appointments".* FROM "appointments"  WHERE "appointments"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["appointment_id", 2], ["body", "3 wolf moon neutra artisan chartreuse loko cred cliche. Cred roof migas. Typewriter carry umami. Salvia tattooed fashion axe chicharrones kitsch offal direct trade."], ["created_at", "2016-12-08 05:13:45.901112"], ["rating", 3], ["updated_at", "2016-12-08 05:13:45.901112"], ["user_id", 19]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["appointment_id", 2], ["body", "Godard meggings park next level freegan. Art party food truck sriracha salvia. Semiotics franzen selvage chillwave irony. Vegan semiotics blue bottle normcore messenger bag. 90's mustache ramps."], ["created_at", "2016-12-08 05:13:45.903622"], ["rating", 1], ["updated_at", "2016-12-08 05:13:45.903622"], ["user_id", 1]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mAppointment Load (0.2ms)[0m  [1mSELECT  "appointments".* FROM "appointments"  WHERE "appointments"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["appointment_id", 3], ["body", "Polaroid +1 waistcoat yr. Wayfarers tilde occupy kogi thundercats offal listicle. Fap pinterest keytar bushwick banjo master. Master asymmetrical portland blue bottle green juice."], ["created_at", "2016-12-08 05:13:45.906442"], ["rating", 5], ["updated_at", "2016-12-08 05:13:45.906442"], ["user_id", 19]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["appointment_id", 3], ["body", "Yr bitters gastropub vinyl brunch cliche fanny pack wolf. Locavore brooklyn etsy disrupt brunch mustache ennui. Chillwave skateboard listicle tote bag master blue bottle 90's. Intelligentsia vegan ethical bushwick. Lomo typewriter deep v."], ["created_at", "2016-12-08 05:13:45.908753"], ["rating", 5], ["updated_at", "2016-12-08 05:13:45.908753"], ["user_id", 6]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mAppointment Load (0.2ms)[0m  SELECT  "appointments".* FROM "appointments"  WHERE "appointments"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["appointment_id", 4], ["body", "Before they sold out pour-over mumblecore park pbr&b tumblr loko. Pork belly hashtag freegan health chicharrones viral roof godard. Tofu hella try-hard ethical mumblecore. Helvetica synth brooklyn fashion axe deep v asymmetrical."], ["created_at", "2016-12-08 05:13:45.912062"], ["rating", 5], ["updated_at", "2016-12-08 05:13:45.912062"], ["user_id", 16]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["appointment_id", 4], ["body", "Pickled bushwick single-origin coffee cray banjo biodiesel thundercats organic. Kinfolk park vegan mustache twee selfies tousled. Seitan keffiyeh quinoa. Cliche fanny pack pabst irony +1."], ["created_at", "2016-12-08 05:13:45.914212"], ["rating", 1], ["updated_at", "2016-12-08 05:13:45.914212"], ["user_id", 4]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mAppointment Load (0.2ms)[0m  [1mSELECT  "appointments".* FROM "appointments"  WHERE "appointments"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["appointment_id", 5], ["body", "Humblebrag roof chicharrones. Bitters drinking godard mlkshk paleo. Gastropub tilde pitchfork single-origin coffee. Kinfolk artisan chillwave."], ["created_at", "2016-12-08 05:13:45.917111"], ["rating", 3], ["updated_at", "2016-12-08 05:13:45.917111"], ["user_id", 19]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["appointment_id", 5], ["body", "Loko viral pabst mustache next level iphone lo-fi normcore. Mumblecore gluten-free lumbersexual wes anderson. Normcore diy chambray godard."], ["created_at", "2016-12-08 05:13:45.919258"], ["rating", 4], ["updated_at", "2016-12-08 05:13:45.919258"], ["user_id", 6]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mAppointment Load (0.1ms)[0m  SELECT  "appointments".* FROM "appointments"  WHERE "appointments"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["appointment_id", 6], ["body", "Brooklyn gluten-free tote bag meh literally. Tacos cleanse cliche. Slow-carb dreamcatcher vinegar flannel gentrify cred. Wayfarers cray bicycle rights scenester biodiesel."], ["created_at", "2016-12-08 05:13:45.922403"], ["rating", 0], ["updated_at", "2016-12-08 05:13:45.922403"], ["user_id", 19]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["appointment_id", 6], ["body", "Stumptown seitan lo-fi fanny pack migas synth asymmetrical tattooed. Knausgaard fap normcore hammock pabst pbr&b. Hoodie diy sriracha stumptown. Literally normcore brunch mustache."], ["created_at", "2016-12-08 05:13:45.924491"], ["rating", 2], ["updated_at", "2016-12-08 05:13:45.924491"], ["user_id", 13]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mAppointment Load (0.1ms)[0m  [1mSELECT  "appointments".* FROM "appointments"  WHERE "appointments"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["appointment_id", 7], ["body", "Beard five dollar toast disrupt synth hashtag vice viral. Tattooed tumblr kale chips jean shorts. 8-bit twee shoreditch aesthetic you probably haven't heard of them taxidermy post-ironic."], ["created_at", "2016-12-08 05:13:45.927424"], ["rating", 1], ["updated_at", "2016-12-08 05:13:45.927424"], ["user_id", 20]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["appointment_id", 7], ["body", "Leggings post-ironic heirloom pork belly brooklyn slow-carb. Williamsburg keffiyeh portland. Humblebrag selvage five dollar toast typewriter. Chartreuse echo pitchfork tote bag. Aesthetic gentrify vinegar ennui biodiesel kitsch seitan sriracha."], ["created_at", "2016-12-08 05:13:45.929574"], ["rating", 0], ["updated_at", "2016-12-08 05:13:45.929574"], ["user_id", 15]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mAppointment Load (0.1ms)[0m  SELECT  "appointments".* FROM "appointments"  WHERE "appointments"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["appointment_id", 8], ["body", "Wes anderson banh mi pug. Polaroid mixtape gentrify occupy. Vice actually hashtag pug next level organic five dollar toast roof."], ["created_at", "2016-12-08 05:13:45.932596"], ["rating", 0], ["updated_at", "2016-12-08 05:13:45.932596"], ["user_id", 20]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["appointment_id", 8], ["body", "Fap mixtape salvia 8-bit shabby chic flexitarian. Five dollar toast trust fund bicycle rights heirloom tumblr offal normcore kale chips. Biodiesel cornhole pug bicycle rights etsy post-ironic humblebrag farm-to-table."], ["created_at", "2016-12-08 05:13:45.934692"], ["rating", 5], ["updated_at", "2016-12-08 05:13:45.934692"], ["user_id", 11]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mAppointment Load (0.1ms)[0m  [1mSELECT  "appointments".* FROM "appointments"  WHERE "appointments"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["appointment_id", 9], ["body", "Disrupt craft beer shabby chic stumptown biodiesel tacos ethical celiac. Aesthetic cornhole brooklyn. Waistcoat tumblr organic. Plaid echo heirloom keffiyeh schlitz brunch asymmetrical. Before they sold out etsy marfa cray occupy."], ["created_at", "2016-12-08 05:13:45.937604"], ["rating", 1], ["updated_at", "2016-12-08 05:13:45.937604"], ["user_id", 19]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["appointment_id", 9], ["body", "Kickstarter trust fund tattooed. Letterpress plaid dreamcatcher pug direct trade aesthetic. Williamsburg put a bird on it pug pickled fixie taxidermy small batch."], ["created_at", "2016-12-08 05:13:45.939689"], ["rating", 3], ["updated_at", "2016-12-08 05:13:45.939689"], ["user_id", 4]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mAppointment Load (0.1ms)[0m  SELECT  "appointments".* FROM "appointments"  WHERE "appointments"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["appointment_id", 10], ["body", "Blog xoxo microdosing kale chips. Hoodie portland flexitarian viral deep v. Squid heirloom pop-up fap tacos keytar."], ["created_at", "2016-12-08 05:13:45.942656"], ["rating", 0], ["updated_at", "2016-12-08 05:13:45.942656"], ["user_id", 16]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["appointment_id", 10], ["body", "Lo-fi diy letterpress green juice direct trade marfa. Fingerstache asymmetrical you probably haven't heard of them kinfolk intelligentsia diy polaroid. Keffiyeh beard butcher street waistcoat. Pickled taxidermy cold-pressed chartreuse fingerstache messenger bag. Cold-pressed meditation raw denim gentrify pork belly put a bird on it chambray sriracha."], ["created_at", "2016-12-08 05:13:45.944758"], ["rating", 5], ["updated_at", "2016-12-08 05:13:45.944758"], ["user_id", 6]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mAppointment Load (0.1ms)[0m  [1mSELECT  "appointments".* FROM "appointments"  WHERE "appointments"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["appointment_id", 11], ["body", "Food truck venmo xoxo flannel ethical. Xoxo kitsch bespoke drinking venmo portland fingerstache diy. Pop-up tattooed quinoa freegan wayfarers. Etsy you probably haven't heard of them heirloom."], ["created_at", "2016-12-08 05:13:45.947688"], ["rating", 1], ["updated_at", "2016-12-08 05:13:45.947688"], ["user_id", 19]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["appointment_id", 11], ["body", "Bushwick everyday craft beer cardigan crucifix mustache organic. Xoxo shoreditch craft beer five dollar toast hammock. Fingerstache seitan hammock tattooed artisan organic. Neutra irony pickled hashtag actually fanny pack brunch ennui."], ["created_at", "2016-12-08 05:13:45.949411"], ["rating", 0], ["updated_at", "2016-12-08 05:13:45.949411"], ["user_id", 14]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mAppointment Load (0.1ms)[0m  SELECT  "appointments".* FROM "appointments"  WHERE "appointments"."id" = $1 LIMIT 1  [["id", 13]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["appointment_id", 12], ["body", "Vinegar wayfarers venmo tousled bitters ennui. Retro pitchfork mixtape. Deep v mixtape leggings farm-to-table authentic post-ironic vice williamsburg. Farm-to-table fanny pack swag street typewriter 3 wolf moon cronut."], ["created_at", "2016-12-08 05:13:45.952158"], ["rating", 2], ["updated_at", "2016-12-08 05:13:45.952158"], ["user_id", 20]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["appointment_id", 12], ["body", "Food truck beard vegan chicharrones chambray. Kale chips bicycle rights vinyl authentic put a bird on it chartreuse meditation. Tousled williamsburg waistcoat raw denim skateboard chambray 90's. Venmo art party yolo chillwave everyday aesthetic before they sold out shoreditch. Everyday tousled plaid scenester meggings drinking."], ["created_at", "2016-12-08 05:13:45.954404"], ["rating", 2], ["updated_at", "2016-12-08 05:13:45.954404"], ["user_id", 13]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mAppointment Load (0.1ms)[0m  [1mSELECT  "appointments".* FROM "appointments"  WHERE "appointments"."id" = $1 LIMIT 1[0m  [["id", 14]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["appointment_id", 13], ["body", "Shoreditch before they sold out scenester park poutine forage. Lo-fi 8-bit hammock cornhole small batch. Wes anderson try-hard single-origin coffee food truck chicharrones. Pitchfork actually blue bottle mustache thundercats butcher semiotics. Chartreuse hella normcore cronut."], ["created_at", "2016-12-08 05:13:45.957421"], ["rating", 4], ["updated_at", "2016-12-08 05:13:45.957421"], ["user_id", 16]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["appointment_id", 13], ["body", "Hammock carry vinegar master sartorial kogi. Artisan chillwave tacos. Hammock leggings kale chips brooklyn beard actually. Pitchfork cardigan wes anderson retro ramps williamsburg food truck art party. Blog put a bird on it meditation 90's."], ["created_at", "2016-12-08 05:13:45.959527"], ["rating", 0], ["updated_at", "2016-12-08 05:13:45.959527"], ["user_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mAppointment Load (0.1ms)[0m  SELECT  "appointments".* FROM "appointments"  WHERE "appointments"."id" = $1 LIMIT 1  [["id", 15]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["appointment_id", 14], ["body", "Distillery cred jean shorts salvia blue bottle lo-fi cold-pressed mumblecore. Shoreditch hella pitchfork heirloom bitters. Mustache health chambray 3 wolf moon hoodie pinterest quinoa pug. Cliche single-origin coffee wes anderson beard raw denim. Brooklyn banh mi cronut 8-bit drinking authentic asymmetrical."], ["created_at", "2016-12-08 05:13:45.962412"], ["rating", 3], ["updated_at", "2016-12-08 05:13:45.962412"], ["user_id", 16]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["appointment_id", 14], ["body", "You probably haven't heard of them lo-fi godard gastropub biodiesel brooklyn. Goth crucifix farm-to-table wes anderson church-key pitchfork truffaut williamsburg. Migas banh mi cornhole bushwick. Chicharrones beard paleo pinterest chambray loko gastropub. Sustainable pbr&b mumblecore narwhal keytar xoxo."], ["created_at", "2016-12-08 05:13:45.964573"], ["rating", 2], ["updated_at", "2016-12-08 05:13:45.964573"], ["user_id", 5]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mAppointment Load (0.1ms)[0m  [1mSELECT  "appointments".* FROM "appointments"  WHERE "appointments"."id" = $1 LIMIT 1[0m  [["id", 16]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["appointment_id", 15], ["body", "90's umami keytar chia bushwick forage drinking godard. Butcher fixie ethical. Hoodie swag single-origin coffee carry meh poutine selvage kale chips."], ["created_at", "2016-12-08 05:13:45.967716"], ["rating", 1], ["updated_at", "2016-12-08 05:13:45.967716"], ["user_id", 19]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["appointment_id", 15], ["body", "Wes anderson tofu raw denim single-origin coffee. Messenger bag small batch echo. Pork belly listicle vhs. Roof offal sustainable messenger bag. Shabby chic offal yuccie."], ["created_at", "2016-12-08 05:13:45.975622"], ["rating", 2], ["updated_at", "2016-12-08 05:13:45.975622"], ["user_id", 14]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mAppointment Load (0.1ms)[0m  SELECT  "appointments".* FROM "appointments"  WHERE "appointments"."id" = $1 LIMIT 1  [["id", 17]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["appointment_id", 16], ["body", "Vice listicle leggings salvia. Wayfarers pabst kombucha. Organic kale chips kickstarter 3 wolf moon farm-to-table. Chambray literally 8-bit bicycle rights cliche."], ["created_at", "2016-12-08 05:13:45.978529"], ["rating", 3], ["updated_at", "2016-12-08 05:13:45.978529"], ["user_id", 19]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["appointment_id", 16], ["body", "Mustache banjo five dollar toast vhs leggings. Crucifix cliche normcore gluten-free. You probably haven't heard of them tilde messenger bag vegan diy godard chartreuse master. 3 wolf moon leggings stumptown mustache pinterest. Salvia 90's seitan."], ["created_at", "2016-12-08 05:13:45.980316"], ["rating", 2], ["updated_at", "2016-12-08 05:13:45.980316"], ["user_id", 3]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mAppointment Load (0.1ms)[0m  [1mSELECT  "appointments".* FROM "appointments"  WHERE "appointments"."id" = $1 LIMIT 1[0m  [["id", 18]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["appointment_id", 17], ["body", "Keffiyeh organic franzen cleanse normcore. Photo booth retro poutine listicle 8-bit before they sold out kale chips. Venmo organic hoodie semiotics pickled chartreuse master. Synth mumblecore semiotics intelligentsia flannel."], ["created_at", "2016-12-08 05:13:45.982599"], ["rating", 5], ["updated_at", "2016-12-08 05:13:45.982599"], ["user_id", 16]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["appointment_id", 17], ["body", "Photo booth five dollar toast microdosing letterpress wolf. Hammock neutra tattooed meditation yr celiac tousled sartorial. Tote bag food truck banh mi salvia pug ennui. Freegan chambray marfa banh mi bitters. Literally portland hashtag drinking deep v pitchfork."], ["created_at", "2016-12-08 05:13:45.984301"], ["rating", 3], ["updated_at", "2016-12-08 05:13:45.984301"], ["user_id", 7]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mAppointment Load (0.1ms)[0m  SELECT  "appointments".* FROM "appointments"  WHERE "appointments"."id" = $1 LIMIT 1  [["id", 19]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["appointment_id", 18], ["body", "Literally locavore artisan retro slow-carb aesthetic. Biodiesel cred before they sold out fap tattooed pickled organic semiotics. 90's narwhal pour-over distillery shabby chic beard plaid five dollar toast. Ugh stumptown gluten-free lo-fi post-ironic everyday. Hammock mustache offal drinking."], ["created_at", "2016-12-08 05:13:45.986636"], ["rating", 3], ["updated_at", "2016-12-08 05:13:45.986636"], ["user_id", 20]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["appointment_id", 18], ["body", "Retro dreamcatcher fixie portland typewriter waistcoat kombucha. Organic vinegar yuccie put a bird on it. Salvia authentic microdosing gluten-free flannel. Sartorial gluten-free banjo. You probably haven't heard of them retro truffaut paleo sustainable flexitarian butcher occupy."], ["created_at", "2016-12-08 05:13:45.988384"], ["rating", 1], ["updated_at", "2016-12-08 05:13:45.988384"], ["user_id", 8]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mAppointment Load (0.1ms)[0m  [1mSELECT  "appointments".* FROM "appointments"  WHERE "appointments"."id" = $1 LIMIT 1[0m  [["id", 20]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["appointment_id", 19], ["body", "Brunch pug yolo letterpress cold-pressed. Cold-pressed heirloom umami fanny pack try-hard butcher beard tote bag. Brooklyn gentrify retro banjo butcher."], ["created_at", "2016-12-08 05:13:45.990558"], ["rating", 4], ["updated_at", "2016-12-08 05:13:45.990558"], ["user_id", 18]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["appointment_id", 19], ["body", "Meggings chicharrones vinegar art party gluten-free you probably haven't heard of them kogi crucifix. Yr gluten-free skateboard swag small batch next level tattooed. Celiac biodiesel occupy cardigan lomo. Craft beer blue bottle +1 vhs pinterest venmo biodiesel goth. Celiac xoxo single-origin coffee."], ["created_at", "2016-12-08 05:13:45.992478"], ["rating", 1], ["updated_at", "2016-12-08 05:13:45.992478"], ["user_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("avatar", "created_at", "email", "name", "password_digest", "phase", "telephone", "updated_at", "user_type") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["avatar", "https://robohash.org/eosfacereofficiis.png?size=300x300&set=set1"], ["created_at", "2016-12-08 05:13:56.382144"], ["email", "estevan_cremin@dooley.org"], ["name", "Courtney Upton"], ["password_digest", "$2a$10$Mp83ieLsHsojFMMNEUFFC.UByhGqZguyas41BsxGZBz/iO7hl1UUC"], ["phase", 3], ["telephone", "358.565.2316"], ["updated_at", "2016-12-08 05:13:56.382144"], ["user_type", "student"]]
+  [1m[35m (2.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("avatar", "created_at", "email", "name", "password_digest", "phase", "telephone", "updated_at", "user_type") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["avatar", "https://robohash.org/nonmolestiasesse.png?size=300x300&set=set1"], ["created_at", "2016-12-08 05:13:56.452060"], ["email", "jean_pouros@howe.name"], ["name", "Hilbert Luettgen"], ["password_digest", "$2a$10$RkBgb0HBtdTlUPY/0HduDOklRpdwMXeYP9DMGvdrq.zYl4GPU2PtC"], ["phase", 3], ["telephone", "177-213-2521"], ["updated_at", "2016-12-08 05:13:56.452060"], ["user_type", "student"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("avatar", "created_at", "email", "name", "password_digest", "phase", "telephone", "updated_at", "user_type") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["avatar", "https://robohash.org/deseruntmolestiaeut.png?size=300x300&set=set1"], ["created_at", "2016-12-08 05:13:56.522943"], ["email", "jany_kling@harber.org"], ["name", "Rubie Beier"], ["password_digest", "$2a$10$CzE2sjMj2bglCO7moGsM7OkIfc7tKgeQDv0T5V1tTKMCiHEDbFMyu"], ["phase", 2], ["telephone", "(371) 416-7120"], ["updated_at", "2016-12-08 05:13:56.522943"], ["user_type", "student"]]
+  [1m[35m (0.9ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("avatar", "created_at", "email", "name", "password_digest", "phase", "telephone", "updated_at", "user_type") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["avatar", "https://robohash.org/doloresquibusdamest.png?size=300x300&set=set1"], ["created_at", "2016-12-08 05:13:56.587911"], ["email", "vern@zboncakbeahan.info"], ["name", "Grady Considine III"], ["password_digest", "$2a$10$38yaQRD.EBsieCUdQKsUqOuEvep3Hyt4Llz6Hg8ZDZWGGF8tbIxXK"], ["phase", 2], ["telephone", "622.685.5093"], ["updated_at", "2016-12-08 05:13:56.587911"], ["user_type", "student"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("avatar", "created_at", "email", "name", "password_digest", "phase", "telephone", "updated_at", "user_type") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["avatar", "https://robohash.org/numquammolestiasquo.png?size=300x300&set=set1"], ["created_at", "2016-12-08 05:13:56.656082"], ["email", "avery@ondricka.org"], ["name", "Freddie O'Connell"], ["password_digest", "$2a$10$cinCrVmpFPs71pXCwPPSwOxklqEOct4bDmT9xKXVl/bE9ae6Vs8N."], ["phase", 2], ["telephone", "1-314-829-8650"], ["updated_at", "2016-12-08 05:13:56.656082"], ["user_type", "student"]]
+  [1m[35m (1.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("avatar", "created_at", "email", "name", "password_digest", "phase", "telephone", "updated_at", "user_type") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["avatar", "https://robohash.org/autminimamaxime.png?size=300x300&set=set1"], ["created_at", "2016-12-08 05:13:56.726882"], ["email", "dina_lueilwitz@eichmanndickens.com"], ["name", "Celine Prosacco V"], ["password_digest", "$2a$10$g2BYHnHZnJqGiSL5Ru67YemcX/F7wIUhE6aOGf/m4WIFuPs79N0c."], ["phase", 1], ["telephone", "617.493.0195"], ["updated_at", "2016-12-08 05:13:56.726882"], ["user_type", "student"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("avatar", "created_at", "email", "name", "password_digest", "phase", "telephone", "updated_at", "user_type") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["avatar", "https://robohash.org/autsedimpedit.png?size=300x300&set=set1"], ["created_at", "2016-12-08 05:13:56.793059"], ["email", "ibrahim@ebertwehner.co"], ["name", "Jonas Ferry"], ["password_digest", "$2a$10$VG5NizEZ16dfib1lstgr8OZj/sIb5Jse96S3sGeH6HdSodARG7eQ2"], ["phase", 1], ["telephone", "1-791-228-4072"], ["updated_at", "2016-12-08 05:13:56.793059"], ["user_type", "student"]]
+  [1m[35m (0.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("avatar", "created_at", "email", "name", "password_digest", "phase", "telephone", "updated_at", "user_type") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["avatar", "https://robohash.org/quoblanditiisdolore.png?size=300x300&set=set1"], ["created_at", "2016-12-08 05:13:56.856290"], ["email", "stephan.klein@jones.net"], ["name", "Jo Prosacco"], ["password_digest", "$2a$10$bujRcZscZFUJGPjKMQe3yOcIJnqwh/Wywf1GYiMWsxBFcJogRweMy"], ["phase", 1], ["telephone", "966-772-7440"], ["updated_at", "2016-12-08 05:13:56.856290"], ["user_type", "student"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("avatar", "created_at", "email", "name", "password_digest", "phase", "telephone", "updated_at", "user_type") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["avatar", "https://robohash.org/idofficiisdolorum.png?size=300x300&set=set1"], ["created_at", "2016-12-08 05:13:56.922855"], ["email", "adeline_beer@leannonemmerich.com"], ["name", "Marilou Heathcote"], ["password_digest", "$2a$10$CY5/UGgAmRd9mXLNQQ.X6eGeXRpToY4i9gJzilffrdARIojYQBiUu"], ["phase", 1], ["telephone", "1-579-377-9540"], ["updated_at", "2016-12-08 05:13:56.922855"], ["user_type", "student"]]
+  [1m[35m (0.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("avatar", "created_at", "email", "name", "password_digest", "phase", "telephone", "updated_at", "user_type") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["avatar", "https://robohash.org/abexercitationemquo.png?size=300x300&set=set1"], ["created_at", "2016-12-08 05:13:56.991973"], ["email", "bailey@williamson.name"], ["name", "Mr. Gilda Jones"], ["password_digest", "$2a$10$r.3gUUXOcsZI.iYweF8Z5uX751YTXVxWhQz/6vtHIPwDGGMgBxHhy"], ["phase", 2], ["telephone", "(926) 226-7870"], ["updated_at", "2016-12-08 05:13:56.991973"], ["user_type", "student"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("avatar", "created_at", "email", "name", "password_digest", "phase", "telephone", "updated_at", "user_type") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["avatar", "https://robohash.org/auttemporibuset.png?size=300x300&set=set1"], ["created_at", "2016-12-08 05:13:57.061017"], ["email", "robb@keelingcummerata.name"], ["name", "Kacey Ryan"], ["password_digest", "$2a$10$QOYaBfaqZc/PlbfaQdhFGeVvwubDGee1G.m6Y/fKG/rz8LmGsS0cG"], ["phase", 3], ["telephone", "693.348.4562"], ["updated_at", "2016-12-08 05:13:57.061017"], ["user_type", "student"]]
+  [1m[35m (0.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("avatar", "created_at", "email", "name", "password_digest", "phase", "telephone", "updated_at", "user_type") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["avatar", "https://robohash.org/natusquisrerum.png?size=300x300&set=set1"], ["created_at", "2016-12-08 05:13:57.131561"], ["email", "alfreda_gusikowski@block.io"], ["name", "Hallie Witting"], ["password_digest", "$2a$10$9JQqFklUrSp5kPkO05i8oeTeBHJsnp5hlWLrUB4GhcIaEOfaXZI0m"], ["phase", 1], ["telephone", "1-794-368-4245"], ["updated_at", "2016-12-08 05:13:57.131561"], ["user_type", "student"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("avatar", "created_at", "email", "name", "password_digest", "phase", "telephone", "updated_at", "user_type") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["avatar", "https://robohash.org/etquifugit.png?size=300x300&set=set1"], ["created_at", "2016-12-08 05:13:57.203816"], ["email", "roderick@schinnerturner.org"], ["name", "Jaleel Kozey"], ["password_digest", "$2a$10$j.7C7S1LF9pGng5xwHr9xeUcwSxCOGgGYCBAW9w1wRNnutl7ZxhGe"], ["phase", 3], ["telephone", "658.604.8413"], ["updated_at", "2016-12-08 05:13:57.203816"], ["user_type", "student"]]
+  [1m[35m (1.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("avatar", "created_at", "email", "name", "password_digest", "phase", "telephone", "updated_at", "user_type") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["avatar", "https://robohash.org/architectoculpaminima.png?size=300x300&set=set1"], ["created_at", "2016-12-08 05:13:57.271073"], ["email", "veronica_medhurst@mrazhammes.info"], ["name", "Alysa Fisher"], ["password_digest", "$2a$10$HqWztlp6AMpIA7pKRcyXhOFdQlgWsIf3YNtkGIU5x1xw7k4ytw9Gq"], ["phase", 2], ["telephone", "597.093.1414"], ["updated_at", "2016-12-08 05:13:57.271073"], ["user_type", "student"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("avatar", "created_at", "email", "name", "password_digest", "phase", "telephone", "updated_at", "user_type") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["avatar", "https://robohash.org/nequepraesentiumsed.png?size=300x300&set=set1"], ["created_at", "2016-12-08 05:13:57.334468"], ["email", "deondre@abernathy.co"], ["name", "Dulce Armstrong"], ["password_digest", "$2a$10$vVsg7z2sC1lCLtPJnkt2bOBO6/9JyE3Z9koGEmBtItyMT6wgDFxse"], ["phase", 3], ["telephone", "1-617-562-0054"], ["updated_at", "2016-12-08 05:13:57.334468"], ["user_type", "student"]]
+  [1m[35m (0.8ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("avatar", "created_at", "email", "name", "password_digest", "phase", "telephone", "updated_at", "user_type") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["avatar", "https://robohash.org/autestprovident.png?size=300x300&set=set1"], ["created_at", "2016-12-08 05:13:57.404018"], ["email", "delphia@lakin.org"], ["name", "Verona Jacobson"], ["password_digest", "$2a$10$OUgmvbjdAsk4yiDGvq8X7O8/V3ONSg7b9CD2wPB6qwW6wqSTDKA.m"], ["phase", 2], ["telephone", "1-810-386-5938"], ["updated_at", "2016-12-08 05:13:57.404018"], ["user_type", "mentor"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("avatar", "created_at", "email", "name", "password_digest", "phase", "telephone", "updated_at", "user_type") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["avatar", "https://robohash.org/nihilvoluptateeos.png?size=300x300&set=set1"], ["created_at", "2016-12-08 05:13:57.474602"], ["email", "annabelle@colecain.com"], ["name", "Teagan Greenholt"], ["password_digest", "$2a$10$4saxrZG7bNm.Te.tEQMlAeKYb82eHdfbbNqnAFzH0wYA9o6TJGdTi"], ["phase", 3], ["telephone", "1-503-538-6969"], ["updated_at", "2016-12-08 05:13:57.474602"], ["user_type", "mentor"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("avatar", "created_at", "email", "name", "password_digest", "phase", "telephone", "updated_at", "user_type") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["avatar", "https://robohash.org/quasivoluptatemdolorem.png?size=300x300&set=set1"], ["created_at", "2016-12-08 05:13:57.544724"], ["email", "jedediah@goldner.net"], ["name", "Rachelle Blick"], ["password_digest", "$2a$10$PELYjIFU5XqfzwE6gEGk.OKCDuGJcGRODfG2Y7YwtgJkhQ8BISkcm"], ["phase", 3], ["telephone", "219-248-2863"], ["updated_at", "2016-12-08 05:13:57.544724"], ["user_type", "mentor"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("avatar", "created_at", "email", "name", "password_digest", "phase", "telephone", "updated_at", "user_type") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["avatar", "https://robohash.org/beataequaequia.png?size=300x300&set=set1"], ["created_at", "2016-12-08 05:13:57.610996"], ["email", "adolphus@kling.net"], ["name", "Tate Kuvalis Sr."], ["password_digest", "$2a$10$x9KoGFBaydSVLfPyTbw11.Ye/3J/4j/F6Dx4qkoI4s2I.bD8OuZKK"], ["phase", 2], ["telephone", "1-963-814-9344"], ["updated_at", "2016-12-08 05:13:57.610996"], ["user_type", "mentor"]]
+  [1m[35m (0.8ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("avatar", "created_at", "email", "name", "password_digest", "phase", "telephone", "updated_at", "user_type") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["avatar", "https://robohash.org/nesciuntestvoluptatem.png?size=300x300&set=set1"], ["created_at", "2016-12-08 05:13:57.680053"], ["email", "flo.denesik@mantebartoletti.info"], ["name", "Laurie Larson V"], ["password_digest", "$2a$10$Sz0N5BIlGNzeVEg8S26FT.mvpPSkoZEC2qJ.N4cPhVum0MivNDVQ."], ["phase", 3], ["telephone", "(276) 533-2007"], ["updated_at", "2016-12-08 05:13:57.680053"], ["user_type", "mentor"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "appointments" ("created_at", "end_time", "mentor_id", "start_time", "student_id", "topic", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2016-12-08 05:13:57.691423"], ["end_time", "2016-12-06 12:04:49.000000"], ["mentor_id", 19], ["start_time", "2016-12-06 17:28:09.000000"], ["student_id", 12], ["topic", "Poutine biodiesel vice vinyl food truck post-ironic."], ["updated_at", "2016-12-08 05:13:57.691423"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "appointments" ("created_at", "end_time", "mentor_id", "start_time", "student_id", "topic", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2016-12-08 05:13:57.693929"], ["end_time", "2016-12-08 05:32:24.000000"], ["mentor_id", 20], ["start_time", "2016-12-07 17:48:11.000000"], ["student_id", 8], ["topic", "Green juice sustainable tacos 90's master."], ["updated_at", "2016-12-08 05:13:57.693929"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "appointments" ("created_at", "end_time", "mentor_id", "start_time", "student_id", "topic", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2016-12-08 05:13:57.695777"], ["end_time", "2016-12-07 07:09:18.000000"], ["mentor_id", 17], ["start_time", "2016-12-07 02:46:17.000000"], ["student_id", 8], ["topic", "Messenger bag plaid tote bag +1 twee."], ["updated_at", "2016-12-08 05:13:57.695777"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "appointments" ("created_at", "end_time", "mentor_id", "start_time", "student_id", "topic", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2016-12-08 05:13:57.697484"], ["end_time", "2016-12-07 09:59:07.000000"], ["mentor_id", 19], ["start_time", "2016-12-08 02:02:27.000000"], ["student_id", 3], ["topic", "Yuccie waistcoat celiac pabst cardigan vice taxidermy mlkshk +1."], ["updated_at", "2016-12-08 05:13:57.697484"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "appointments" ("created_at", "end_time", "mentor_id", "start_time", "student_id", "topic", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2016-12-08 05:13:57.699570"], ["end_time", "2016-12-07 18:00:29.000000"], ["mentor_id", 20], ["start_time", "2016-12-06 19:02:42.000000"], ["student_id", 1], ["topic", "Literally tilde vegan craft beer."], ["updated_at", "2016-12-08 05:13:57.699570"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "appointments" ("created_at", "end_time", "mentor_id", "start_time", "student_id", "topic", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2016-12-08 05:13:57.701749"], ["end_time", "2016-12-07 02:32:57.000000"], ["mentor_id", 19], ["start_time", "2016-12-08 06:40:58.000000"], ["student_id", 2], ["topic", "Wes anderson waistcoat everyday kogi migas polaroid tilde scenester."], ["updated_at", "2016-12-08 05:13:57.701749"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "appointments" ("created_at", "end_time", "mentor_id", "start_time", "student_id", "topic", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2016-12-08 05:13:57.703689"], ["end_time", "2016-12-07 04:08:55.000000"], ["mentor_id", 17], ["start_time", "2016-12-07 18:07:42.000000"], ["student_id", 4], ["topic", "Occupy deep v microdosing drinking."], ["updated_at", "2016-12-08 05:13:57.703689"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "appointments" ("created_at", "end_time", "mentor_id", "start_time", "student_id", "topic", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2016-12-08 05:13:57.705499"], ["end_time", "2016-12-06 14:20:20.000000"], ["mentor_id", 18], ["start_time", "2016-12-07 01:12:10.000000"], ["student_id", 15], ["topic", "Readymade echo offal celiac."], ["updated_at", "2016-12-08 05:13:57.705499"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "appointments" ("created_at", "end_time", "mentor_id", "start_time", "student_id", "topic", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2016-12-08 05:13:57.707369"], ["end_time", "2016-12-06 22:31:25.000000"], ["mentor_id", 20], ["start_time", "2016-12-08 03:12:54.000000"], ["student_id", 13], ["topic", "Tofu loko pabst twee chartreuse austin."], ["updated_at", "2016-12-08 05:13:57.707369"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "appointments" ("created_at", "end_time", "mentor_id", "start_time", "student_id", "topic", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2016-12-08 05:13:57.709308"], ["end_time", "2016-12-07 10:12:13.000000"], ["mentor_id", 18], ["start_time", "2016-12-07 01:57:06.000000"], ["student_id", 8], ["topic", "Chartreuse leggings next level farm-to-table migas."], ["updated_at", "2016-12-08 05:13:57.709308"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "appointments" ("created_at", "end_time", "mentor_id", "start_time", "student_id", "topic", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2016-12-08 05:13:57.711085"], ["end_time", "2016-12-06 18:08:08.000000"], ["mentor_id", 20], ["start_time", "2016-12-07 08:41:46.000000"], ["student_id", 10], ["topic", "Poutine tote bag selvage park."], ["updated_at", "2016-12-08 05:13:57.711085"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "appointments" ("created_at", "end_time", "mentor_id", "start_time", "student_id", "topic", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2016-12-08 05:13:57.712694"], ["end_time", "2016-12-06 12:19:06.000000"], ["mentor_id", 17], ["start_time", "2016-12-08 02:47:28.000000"], ["student_id", 8], ["topic", "Mumblecore mlkshk trust fund craft beer franzen street synth blue bottle."], ["updated_at", "2016-12-08 05:13:57.712694"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "appointments" ("created_at", "end_time", "mentor_id", "start_time", "student_id", "topic", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2016-12-08 05:13:57.714438"], ["end_time", "2016-12-08 04:44:24.000000"], ["mentor_id", 17], ["start_time", "2016-12-07 16:04:13.000000"], ["student_id", 8], ["topic", "Intelligentsia bespoke chartreuse yuccie chicharrones pbr&b narwhal everyday kombucha."], ["updated_at", "2016-12-08 05:13:57.714438"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "appointments" ("created_at", "end_time", "mentor_id", "start_time", "student_id", "topic", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2016-12-08 05:13:57.716377"], ["end_time", "2016-12-06 18:41:54.000000"], ["mentor_id", 17], ["start_time", "2016-12-08 05:59:10.000000"], ["student_id", 3], ["topic", "Aesthetic semiotics yuccie cliche distillery wayfarers."], ["updated_at", "2016-12-08 05:13:57.716377"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "appointments" ("created_at", "end_time", "mentor_id", "start_time", "student_id", "topic", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2016-12-08 05:13:57.718353"], ["end_time", "2016-12-07 15:39:48.000000"], ["mentor_id", 16], ["start_time", "2016-12-06 19:41:46.000000"], ["student_id", 4], ["topic", "Knausgaard vhs microdosing 3 wolf moon yuccie vinyl five dollar toast squid."], ["updated_at", "2016-12-08 05:13:57.718353"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "appointments" ("created_at", "end_time", "mentor_id", "start_time", "student_id", "topic", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2016-12-08 05:13:57.720012"], ["end_time", "2016-12-07 10:21:06.000000"], ["mentor_id", 18], ["start_time", "2016-12-07 17:50:42.000000"], ["student_id", 9], ["topic", "Park godard neutra chartreuse tattooed."], ["updated_at", "2016-12-08 05:13:57.720012"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "appointments" ("created_at", "end_time", "mentor_id", "start_time", "student_id", "topic", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2016-12-08 05:13:57.721952"], ["end_time", "2016-12-07 07:16:43.000000"], ["mentor_id", 17], ["start_time", "2016-12-06 18:26:50.000000"], ["student_id", 5], ["topic", "Salvia put a bird on it church-key synth cardigan pbr&b bespoke."], ["updated_at", "2016-12-08 05:13:57.721952"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "appointments" ("created_at", "end_time", "mentor_id", "start_time", "student_id", "topic", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2016-12-08 05:13:57.723638"], ["end_time", "2016-12-06 17:39:34.000000"], ["mentor_id", 17], ["start_time", "2016-12-07 15:21:58.000000"], ["student_id", 2], ["topic", "Dreamcatcher everyday brunch locavore pop-up waistcoat retro blue bottle fap."], ["updated_at", "2016-12-08 05:13:57.723638"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "appointments" ("created_at", "end_time", "mentor_id", "start_time", "student_id", "topic", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2016-12-08 05:13:57.725477"], ["end_time", "2016-12-06 21:18:52.000000"], ["mentor_id", 20], ["start_time", "2016-12-06 12:03:54.000000"], ["student_id", 1], ["topic", "Leggings literally meditation thundercats forage venmo."], ["updated_at", "2016-12-08 05:13:57.725477"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "appointments" ("created_at", "end_time", "mentor_id", "start_time", "student_id", "topic", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2016-12-08 05:13:57.727316"], ["end_time", "2016-12-06 23:17:07.000000"], ["mentor_id", 16], ["start_time", "2016-12-06 19:46:19.000000"], ["student_id", 8], ["topic", "Tilde master gluten-free williamsburg fanny pack actually."], ["updated_at", "2016-12-08 05:13:57.727316"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mAppointment Load (0.2ms)[0m  SELECT  "appointments".* FROM "appointments"  WHERE "appointments"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["appointment_id", 0], ["body", "Shabby chic green juice chambray meditation pbr&b. Blog skateboard everyday park hammock. Paleo park loko sriracha tofu mlkshk waistcoat fashion axe."], ["created_at", "2016-12-08 05:13:57.735932"], ["rating", 5], ["updated_at", "2016-12-08 05:13:57.735932"], ["user_id", 17]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["appointment_id", 0], ["body", "Drinking kombucha yr crucifix. Tattooed biodiesel cardigan vinegar. Venmo celiac heirloom retro seitan godard everyday."], ["created_at", "2016-12-08 05:13:57.737986"], ["rating", 0], ["updated_at", "2016-12-08 05:13:57.737986"], ["user_id", 1]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mAppointment Load (0.2ms)[0m  [1mSELECT  "appointments".* FROM "appointments"  WHERE "appointments"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["appointment_id", 1], ["body", "Helvetica trust fund organic selfies etsy narwhal. Sartorial messenger bag tattooed. Scenester waistcoat crucifix gluten-free semiotics umami tumblr skateboard. Polaroid wayfarers lumbersexual helvetica. Pug authentic butcher wes anderson."], ["created_at", "2016-12-08 05:13:57.740129"], ["rating", 2], ["updated_at", "2016-12-08 05:13:57.740129"], ["user_id", 16]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["appointment_id", 1], ["body", "Taxidermy lumbersexual wes anderson banh mi godard. Asymmetrical keytar flexitarian actually mustache vinyl slow-carb keffiyeh. Shoreditch tattooed lo-fi next level seitan pop-up. Irony put a bird on it meh vinegar ramps. Cred food truck knausgaard."], ["created_at", "2016-12-08 05:13:57.741748"], ["rating", 1], ["updated_at", "2016-12-08 05:13:57.741748"], ["user_id", 9]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mAppointment Load (0.2ms)[0m  SELECT  "appointments".* FROM "appointments"  WHERE "appointments"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["appointment_id", 2], ["body", "Plaid authentic craft beer kogi disrupt leggings. Selvage paleo bitters hashtag williamsburg aesthetic kickstarter asymmetrical. Heirloom cred cleanse keffiyeh +1 thundercats pork belly. Chartreuse meditation helvetica. Mixtape gentrify artisan venmo selfies."], ["created_at", "2016-12-08 05:13:57.743654"], ["rating", 2], ["updated_at", "2016-12-08 05:13:57.743654"], ["user_id", 19]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["appointment_id", 2], ["body", "Church-key semiotics wayfarers chillwave hoodie asymmetrical. Food truck quinoa distillery wes anderson 3 wolf moon tofu. Fixie godard vinegar roof lo-fi keffiyeh plaid kinfolk."], ["created_at", "2016-12-08 05:13:57.745137"], ["rating", 0], ["updated_at", "2016-12-08 05:13:57.745137"], ["user_id", 1]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mAppointment Load (0.2ms)[0m  [1mSELECT  "appointments".* FROM "appointments"  WHERE "appointments"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["appointment_id", 3], ["body", "Lomo next level typewriter deep v freegan squid crucifix loko. Flexitarian messenger bag gastropub lo-fi humblebrag roof neutra. Put a bird on it listicle semiotics xoxo disrupt street."], ["created_at", "2016-12-08 05:13:57.747188"], ["rating", 4], ["updated_at", "2016-12-08 05:13:57.747188"], ["user_id", 19]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["appointment_id", 3], ["body", "Messenger bag wolf mumblecore fanny pack green juice you probably haven't heard of them master locavore. Mustache carry ennui sustainable. Biodiesel neutra artisan mixtape diy pbr&b."], ["created_at", "2016-12-08 05:13:57.748801"], ["rating", 0], ["updated_at", "2016-12-08 05:13:57.748801"], ["user_id", 6]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mAppointment Load (0.2ms)[0m  SELECT  "appointments".* FROM "appointments"  WHERE "appointments"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["appointment_id", 4], ["body", "Tote bag sartorial ennui. Occupy flannel locavore blog vhs readymade authentic biodiesel. Squid distillery photo booth fanny pack. Listicle yuccie tacos fanny pack cornhole before they sold out."], ["created_at", "2016-12-08 05:13:57.750702"], ["rating", 4], ["updated_at", "2016-12-08 05:13:57.750702"], ["user_id", 16]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["appointment_id", 4], ["body", "Seitan neutra paleo swag. Street hashtag synth kombucha listicle trust fund. Organic pop-up beard semiotics salvia. Vhs microdosing iphone messenger bag marfa loko. Pbr&b irony bicycle rights disrupt."], ["created_at", "2016-12-08 05:13:57.752319"], ["rating", 2], ["updated_at", "2016-12-08 05:13:57.752319"], ["user_id", 4]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mAppointment Load (0.2ms)[0m  [1mSELECT  "appointments".* FROM "appointments"  WHERE "appointments"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["appointment_id", 5], ["body", "Fixie knausgaard bespoke pop-up vinyl pour-over. Pug narwhal knausgaard raw denim scenester biodiesel. Deep v kickstarter humblebrag mlkshk sustainable. Meditation waistcoat truffaut fingerstache. Vice lomo photo booth."], ["created_at", "2016-12-08 05:13:57.754223"], ["rating", 3], ["updated_at", "2016-12-08 05:13:57.754223"], ["user_id", 19]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["appointment_id", 5], ["body", "Letterpress diy venmo wolf pickled seitan gluten-free austin. Normcore roof street wolf cliche thundercats. Deep v yolo mixtape seitan bicycle rights taxidermy messenger bag. Ramps master fingerstache waistcoat wolf. Tattooed 3 wolf moon actually blog meggings slow-carb microdosing."], ["created_at", "2016-12-08 05:13:57.755690"], ["rating", 3], ["updated_at", "2016-12-08 05:13:57.755690"], ["user_id", 6]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mAppointment Load (0.1ms)[0m  SELECT  "appointments".* FROM "appointments"  WHERE "appointments"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["appointment_id", 6], ["body", "Venmo gastropub vhs roof everyday franzen asymmetrical. Wes anderson park meditation shoreditch drinking squid. Gluten-free umami flexitarian flannel kombucha seitan ennui."], ["created_at", "2016-12-08 05:13:57.757638"], ["rating", 0], ["updated_at", "2016-12-08 05:13:57.757638"], ["user_id", 19]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["appointment_id", 6], ["body", "Whatever blue bottle hammock organic church-key. Slow-carb 90's occupy you probably haven't heard of them synth distillery listicle loko. Selvage lomo scenester. Freegan mlkshk vegan yuccie celiac. +1 mumblecore diy pinterest yr kombucha."], ["created_at", "2016-12-08 05:13:57.759245"], ["rating", 0], ["updated_at", "2016-12-08 05:13:57.759245"], ["user_id", 13]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mAppointment Load (0.1ms)[0m  [1mSELECT  "appointments".* FROM "appointments"  WHERE "appointments"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["appointment_id", 7], ["body", "Ennui 3 wolf moon asymmetrical vinyl plaid shabby chic cliche. Tattooed heirloom tofu readymade try-hard iphone health etsy. Microdosing food truck meh retro offal green juice. Flexitarian letterpress butcher cred. Humblebrag chambray polaroid godard small batch before they sold out."], ["created_at", "2016-12-08 05:13:57.761200"], ["rating", 2], ["updated_at", "2016-12-08 05:13:57.761200"], ["user_id", 20]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["appointment_id", 7], ["body", "Mustache fap tacos fashion axe cred vhs readymade. Synth swag iphone hammock tacos fap. Squid tattooed pour-over gastropub goth everyday crucifix plaid. Cold-pressed literally church-key. Pbr&b actually tilde."], ["created_at", "2016-12-08 05:13:57.762671"], ["rating", 3], ["updated_at", "2016-12-08 05:13:57.762671"], ["user_id", 15]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mAppointment Load (0.1ms)[0m  SELECT  "appointments".* FROM "appointments"  WHERE "appointments"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["appointment_id", 8], ["body", "Actually fashion axe sartorial marfa typewriter knausgaard. Helvetica leggings fap migas flexitarian diy kombucha. Intelligentsia fap asymmetrical wayfarers ennui. Goth synth actually williamsburg bitters banjo celiac aesthetic."], ["created_at", "2016-12-08 05:13:57.764468"], ["rating", 1], ["updated_at", "2016-12-08 05:13:57.764468"], ["user_id", 20]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["appointment_id", 8], ["body", "Ramps ethical selfies tumblr pop-up beard wayfarers. Taxidermy shoreditch twee. Craft beer tumblr leggings."], ["created_at", "2016-12-08 05:13:57.765856"], ["rating", 2], ["updated_at", "2016-12-08 05:13:57.765856"], ["user_id", 11]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mAppointment Load (0.1ms)[0m  [1mSELECT  "appointments".* FROM "appointments"  WHERE "appointments"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["appointment_id", 9], ["body", "Flannel jean shorts helvetica ennui everyday truffaut pitchfork. Letterpress meh portland kombucha. Pitchfork kinfolk austin pour-over ugh."], ["created_at", "2016-12-08 05:13:57.767634"], ["rating", 4], ["updated_at", "2016-12-08 05:13:57.767634"], ["user_id", 19]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["appointment_id", 9], ["body", "Tacos swag occupy pop-up heirloom selfies art party authentic. Literally franzen kombucha selfies chia kitsch pickled. Neutra hoodie 3 wolf moon salvia typewriter humblebrag tousled knausgaard. Twee banh mi roof. Iphone tote bag xoxo kickstarter vice art party pour-over."], ["created_at", "2016-12-08 05:13:57.769283"], ["rating", 5], ["updated_at", "2016-12-08 05:13:57.769283"], ["user_id", 4]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mAppointment Load (0.1ms)[0m  SELECT  "appointments".* FROM "appointments"  WHERE "appointments"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["appointment_id", 10], ["body", "Forage diy hella chartreuse hoodie mumblecore. Viral wayfarers carry kinfolk cronut 8-bit bushwick. Hammock 90's art party slow-carb knausgaard iphone vegan. Tattooed pbr&b semiotics. Kombucha cred church-key vinegar sartorial bespoke."], ["created_at", "2016-12-08 05:13:57.771213"], ["rating", 2], ["updated_at", "2016-12-08 05:13:57.771213"], ["user_id", 16]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["appointment_id", 10], ["body", "Blog tattooed mumblecore. Poutine flannel cold-pressed wayfarers. Banh mi gluten-free chillwave. Cliche retro cronut stumptown 3 wolf moon."], ["created_at", "2016-12-08 05:13:57.772763"], ["rating", 3], ["updated_at", "2016-12-08 05:13:57.772763"], ["user_id", 6]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mAppointment Load (0.1ms)[0m  [1mSELECT  "appointments".* FROM "appointments"  WHERE "appointments"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["appointment_id", 11], ["body", "Organic franzen ugh cleanse locavore cliche food truck xoxo. Scenester vinyl cold-pressed pbr&b hella. Tilde bushwick cliche organic mixtape."], ["created_at", "2016-12-08 05:13:57.774637"], ["rating", 2], ["updated_at", "2016-12-08 05:13:57.774637"], ["user_id", 19]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["appointment_id", 11], ["body", "Gentrify distillery bicycle rights 8-bit wes anderson. Brooklyn banjo etsy. Vegan plaid narwhal park craft beer semiotics umami portland. Art party ramps whatever cred xoxo yolo. Migas shoreditch chartreuse lomo organic cred ennui pbr&b."], ["created_at", "2016-12-08 05:13:57.776076"], ["rating", 0], ["updated_at", "2016-12-08 05:13:57.776076"], ["user_id", 14]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mAppointment Load (0.1ms)[0m  SELECT  "appointments".* FROM "appointments"  WHERE "appointments"."id" = $1 LIMIT 1  [["id", 13]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["appointment_id", 12], ["body", "Portland venmo deep v yr bushwick. Waistcoat art party whatever kogi pabst keytar meditation distillery. Cornhole gluten-free artisan godard mlkshk. Occupy aesthetic mixtape butcher trust fund hoodie."], ["created_at", "2016-12-08 05:13:57.777838"], ["rating", 2], ["updated_at", "2016-12-08 05:13:57.777838"], ["user_id", 20]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["appointment_id", 12], ["body", "Pabst literally truffaut. Slow-carb direct trade squid tumblr meggings. Poutine asymmetrical roof portland skateboard thundercats gentrify."], ["created_at", "2016-12-08 05:13:57.779308"], ["rating", 4], ["updated_at", "2016-12-08 05:13:57.779308"], ["user_id", 13]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mAppointment Load (0.1ms)[0m  [1mSELECT  "appointments".* FROM "appointments"  WHERE "appointments"."id" = $1 LIMIT 1[0m  [["id", 14]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["appointment_id", 13], ["body", "Dreamcatcher sustainable try-hard hammock bitters. Umami intelligentsia pour-over meditation hashtag organic. Post-ironic kogi meh ugh wes anderson."], ["created_at", "2016-12-08 05:13:57.781234"], ["rating", 0], ["updated_at", "2016-12-08 05:13:57.781234"], ["user_id", 16]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["appointment_id", 13], ["body", "Pbr&b pinterest cleanse. Organic beard crucifix mlkshk. Taxidermy polaroid pour-over."], ["created_at", "2016-12-08 05:13:57.782738"], ["rating", 5], ["updated_at", "2016-12-08 05:13:57.782738"], ["user_id", 1]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mAppointment Load (0.2ms)[0m  SELECT  "appointments".* FROM "appointments"  WHERE "appointments"."id" = $1 LIMIT 1  [["id", 15]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["appointment_id", 14], ["body", "Butcher listicle vinyl tattooed mumblecore blog photo booth. Shoreditch artisan cardigan squid occupy godard tumblr goth. Brooklyn slow-carb franzen."], ["created_at", "2016-12-08 05:13:57.784761"], ["rating", 0], ["updated_at", "2016-12-08 05:13:57.784761"], ["user_id", 16]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["appointment_id", 14], ["body", "Humblebrag occupy quinoa cred five dollar toast brunch neutra. Selvage seitan williamsburg chartreuse. Synth disrupt vhs butcher jean shorts. Wolf semiotics small batch gastropub gentrify locavore stumptown."], ["created_at", "2016-12-08 05:13:57.786145"], ["rating", 0], ["updated_at", "2016-12-08 05:13:57.786145"], ["user_id", 5]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mAppointment Load (0.1ms)[0m  [1mSELECT  "appointments".* FROM "appointments"  WHERE "appointments"."id" = $1 LIMIT 1[0m  [["id", 16]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["appointment_id", 15], ["body", "Post-ironic knausgaard tofu microdosing. Kitsch listicle butcher franzen shoreditch. Slow-carb cronut bushwick typewriter gluten-free heirloom locavore. Scenester venmo sustainable fap cleanse chartreuse raw denim."], ["created_at", "2016-12-08 05:13:57.788101"], ["rating", 2], ["updated_at", "2016-12-08 05:13:57.788101"], ["user_id", 19]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["appointment_id", 15], ["body", "Migas hoodie literally banh mi. Semiotics pop-up vhs diy art party flannel letterpress. Locavore cold-pressed narwhal master. Listicle carry letterpress irony fanny pack art party vinegar godard. Crucifix literally kombucha single-origin coffee vinyl authentic forage mixtape."], ["created_at", "2016-12-08 05:13:57.789679"], ["rating", 3], ["updated_at", "2016-12-08 05:13:57.789679"], ["user_id", 14]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mAppointment Load (0.1ms)[0m  SELECT  "appointments".* FROM "appointments"  WHERE "appointments"."id" = $1 LIMIT 1  [["id", 17]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["appointment_id", 16], ["body", "Post-ironic williamsburg mumblecore migas jean shorts bitters blog bespoke. Austin celiac keffiyeh put a bird on it literally. Photo booth twee dreamcatcher sartorial godard. Squid actually kogi mlkshk occupy. Viral meh actually semiotics."], ["created_at", "2016-12-08 05:13:57.791514"], ["rating", 0], ["updated_at", "2016-12-08 05:13:57.791514"], ["user_id", 19]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["appointment_id", 16], ["body", "Pop-up locavore venmo seitan salvia. Paleo kombucha church-key. Ramps jean shorts tumblr roof letterpress forage mlkshk mumblecore. Meggings kinfolk brooklyn wolf. Plaid 90's typewriter raw denim carry waistcoat health."], ["created_at", "2016-12-08 05:13:57.793067"], ["rating", 0], ["updated_at", "2016-12-08 05:13:57.793067"], ["user_id", 3]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mAppointment Load (0.1ms)[0m  [1mSELECT  "appointments".* FROM "appointments"  WHERE "appointments"."id" = $1 LIMIT 1[0m  [["id", 18]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["appointment_id", 17], ["body", "Scenester bespoke wolf meh biodiesel. Roof sriracha meggings flannel. Lumbersexual before they sold out brooklyn banjo shoreditch. Helvetica dreamcatcher bushwick bitters pickled taxidermy sustainable. Ugh street chicharrones sustainable vegan cold-pressed."], ["created_at", "2016-12-08 05:13:57.794955"], ["rating", 4], ["updated_at", "2016-12-08 05:13:57.794955"], ["user_id", 16]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["appointment_id", 17], ["body", "Keffiyeh selvage pabst loko mumblecore vinyl neutra. Tumblr food truck cliche. Kombucha meggings trust fund master cardigan direct trade butcher freegan. Thundercats schlitz tattooed. Austin skateboard kale chips fap."], ["created_at", "2016-12-08 05:13:57.796496"], ["rating", 0], ["updated_at", "2016-12-08 05:13:57.796496"], ["user_id", 7]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mAppointment Load (0.1ms)[0m  SELECT  "appointments".* FROM "appointments"  WHERE "appointments"."id" = $1 LIMIT 1  [["id", 19]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["appointment_id", 18], ["body", "Kickstarter art party neutra street health aesthetic. Intelligentsia pug brooklyn. Farm-to-table cold-pressed single-origin coffee sustainable twee. Tumblr before they sold out raw denim. Brunch pour-over roof umami aesthetic."], ["created_at", "2016-12-08 05:13:57.798462"], ["rating", 5], ["updated_at", "2016-12-08 05:13:57.798462"], ["user_id", 20]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["appointment_id", 18], ["body", "Chicharrones sustainable kitsch trust fund cardigan. 90's 8-bit tote bag occupy. Fingerstache meditation venmo selvage typewriter mixtape. Sustainable single-origin coffee craft beer master whatever."], ["created_at", "2016-12-08 05:13:57.799882"], ["rating", 3], ["updated_at", "2016-12-08 05:13:57.799882"], ["user_id", 8]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mAppointment Load (0.1ms)[0m  [1mSELECT  "appointments".* FROM "appointments"  WHERE "appointments"."id" = $1 LIMIT 1[0m  [["id", 20]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["appointment_id", 19], ["body", "Green juice lomo banh mi intelligentsia narwhal cray celiac fanny pack. Tofu viral before they sold out. 3 wolf moon meditation put a bird on it salvia chartreuse kogi offal godard."], ["created_at", "2016-12-08 05:13:57.801813"], ["rating", 3], ["updated_at", "2016-12-08 05:13:57.801813"], ["user_id", 18]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "feedbacks" ("appointment_id", "body", "created_at", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["appointment_id", 19], ["body", "Echo fixie wayfarers. Everyday truffaut knausgaard dreamcatcher seitan franzen literally. Kombucha kale chips pickled craft beer offal."], ["created_at", "2016-12-08 05:13:57.803344"], ["rating", 3], ["updated_at", "2016-12-08 05:13:57.803344"], ["user_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-07 21:14:03 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb (1.0ms)
+Completed 200 OK in 22ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-12-07 21:14:11 -0800
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb (0.3ms)
+Completed 200 OK in 11ms (Views: 4.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2016-12-07 21:14:16 -0800
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info" for 127.0.0.1 at 2016-12-07 21:14:24 -0800
+Processing by Rails::InfoController#index as HTML
+Redirected to http://localhost:3000/rails/info/routes
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2016-12-07 21:14:24 -0800
+Processing by Rails::InfoController#routes as HTML
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (6.2ms)
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-4.1.4/lib/rails/templates/rails/info/routes.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 30ms (Views: 29.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-12-07 21:16:29 -0800
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb (3.3ms)
+Completed 500 Internal Server Error in 13ms
+
+ActionView::Template::Error (The partial name (user#form) is not a valid Ruby identifier; make sure your partial name starts with a lowercase letter or underscore, and is followed by any combination of letters, numbers and underscores.):
+    1: <%= render "user#form" %>
+  app/views/users/new.html.erb:1:in `_app_views_users_new_html_erb___1694338046790292251_70324769717320'
+
+
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (36.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-12-07 21:16:41 -0800
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb (2.6ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (The partial name (users#form) is not a valid Ruby identifier; make sure your partial name starts with a lowercase letter or underscore, and is followed by any combination of letters, numbers and underscores.):
+    1: <%= render "users#form" %>
+  app/views/users/new.html.erb:1:in `_app_views_users_new_html_erb___1694338046790292251_70324769375600'
+
+
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (49.5ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-12-07 21:16:47 -0800
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb (4.6ms)
+Completed 500 Internal Server Error in 11ms
+
+ActionView::Template::Error (Missing partial user/_form with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/home-tico/Documents/Parinaz/School/DevBootcamp/phase3/week1/MenMen/app/views"
+):
+    1: <%= render "user/form" %>
+  app/views/users/new.html.erb:1:in `_app_views_users_new_html_erb___1694338046790292251_70324768036100'
+
+
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (45.5ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-12-07 21:16:54 -0800
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (369.5ms)
+  Rendered users/new.html.erb (371.7ms)
+Completed 500 Internal Server Error in 377ms
+
+ActionView::Template::Error (undefined method `emal' for #<User:0x007feb8967a2d8>
+Did you mean?  email):
+     7:   </p>
+     8:   <p>
+     9:     <%= f.label :email %><br>
+    10:     <%= f.text_field :emal %>
+    11:   </p>
+    12:   <p>
+    13:     <%= f.label :password %><br>
+  app/views/users/_form.html.erb:10:in `block in _app_views_users__form_html_erb__3125319703089653123_70324799606200'
+  app/views/users/_form.html.erb:3:in `_app_views_users__form_html_erb__3125319703089653123_70324799606200'
+  app/views/users/new.html.erb:1:in `_app_views_users_new_html_erb___1694338046790292251_70324799652620'
+
+
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (48.4ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-12-07 21:17:08 -0800
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (3.9ms)
+  Rendered users/new.html.erb (6.5ms)
+Completed 200 OK in 13ms (Views: 12.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-12-07 21:19:10 -0800
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (4.5ms)
+  Rendered users/new.html.erb (6.1ms)
+Completed 500 Internal Server Error in 11ms
+
+ActionView::Template::Error (wrong number of arguments (given 1, expected 2..3)):
+    20:  
+    21:   <section>
+    22:     <%= f.label :user_type %><br>
+    23:     <%= f.radio_button ("student") %>
+    24:     <%= f.radio_button ("mentor") %>
+    25:   </section>
+    26:  
+  app/views/users/_form.html.erb:23:in `block in _app_views_users__form_html_erb__3125319703089653123_70324808870600'
+  app/views/users/_form.html.erb:3:in `_app_views_users__form_html_erb__3125319703089653123_70324808870600'
+  app/views/users/new.html.erb:1:in `_app_views_users_new_html_erb___1694338046790292251_70324799652620'
+
+
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (33.8ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-12-07 21:19:28 -0800
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (3.6ms)
+  Rendered users/new.html.erb (5.1ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (wrong number of arguments (given 1, expected 2..3)):
+    21:   <section>
+    22:     <%= f.label :user_type %><br>
+    23: 
+    24:     <%= f.radio_button("student") %>
+    25:     <%= f.radio_button("mentor") %>
+    26:   </section>
+    27:  
+  app/views/users/_form.html.erb:24:in `block in _app_views_users__form_html_erb__3125319703089653123_70324799346760'
+  app/views/users/_form.html.erb:3:in `_app_views_users__form_html_erb__3125319703089653123_70324799346760'
+  app/views/users/new.html.erb:1:in `_app_views_users_new_html_erb___1694338046790292251_70324799652620'
+
+
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (36.7ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-12-07 21:20:31 -0800
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (7.0ms)
+  Rendered users/new.html.erb (8.6ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-12-07 21:21:04 -0800
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (6.2ms)
+  Rendered users/new.html.erb (7.7ms)
+Completed 500 Internal Server Error in 13ms
+
+ActionView::Template::Error (undefined method `merge' for "student":String):
+    21:   <section>
+    22:     <%= f.label :user_type %><br>
+    23: 
+    24:     <%= f.radio_button("user_type","student","student") %>
+    25:     <%= f.radio_button("user_type","mentor") %>
+    26:   </section>
+    27:  
+  app/views/users/_form.html.erb:24:in `block in _app_views_users__form_html_erb__3125319703089653123_70324809126540'
+  app/views/users/_form.html.erb:3:in `_app_views_users__form_html_erb__3125319703089653123_70324809126540'
+  app/views/users/new.html.erb:1:in `_app_views_users_new_html_erb___1694338046790292251_70324799652620'
+
+
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (36.3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-12-07 21:21:35 -0800
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (9.4ms)
+  Rendered users/new.html.erb (10.8ms)
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error (undefined method `student' for #<User:0x007feb89441958>):
+    21:   <section>
+    22:     <%= f.label :user_type %><br>
+    23: 
+    24:     <%= f.radio_button("student","user_type") %>
+    25:     <%= f.radio_button("mentor","user_type") %>
+    26:   </section>
+    27:  
+  app/views/users/_form.html.erb:24:in `block in _app_views_users__form_html_erb__3125319703089653123_70324809557200'
+  app/views/users/_form.html.erb:3:in `_app_views_users__form_html_erb__3125319703089653123_70324809557200'
+  app/views/users/new.html.erb:1:in `_app_views_users_new_html_erb___1694338046790292251_70324799652620'
+
+
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (37.5ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-12-07 21:22:47 -0800
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (15.6ms)
+  Rendered users/new.html.erb (17.1ms)
+Completed 500 Internal Server Error in 22ms
+
+ActionView::Template::Error (undefined method `radio_button_tag' for #<ActionView::Helpers::FormBuilder:0x007feb8a9deec8>
+Did you mean?  radio_button):
+    21:   <section>
+    22:     <%= f.label :user_type %><br>
+    23: 
+    24:     <%= f.radio_button_tag(user_type: "student") %>
+    25:     <%= f.radio_button_tag(user_type: "mentor") %>
+    26:   </section>
+    27:  
+  app/views/users/_form.html.erb:24:in `block in _app_views_users__form_html_erb__3125319703089653123_70324770464820'
+  app/views/users/_form.html.erb:3:in `_app_views_users__form_html_erb__3125319703089653123_70324770464820'
+  app/views/users/new.html.erb:1:in `_app_views_users_new_html_erb___1694338046790292251_70324799652620'
+
+
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (33.6ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-12-07 21:22:57 -0800
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (15.3ms)
+  Rendered users/new.html.erb (16.9ms)
+Completed 500 Internal Server Error in 22ms
+
+ActionView::Template::Error (undefined method `radio_button_tag' for #<ActionView::Helpers::FormBuilder:0x007feb85e279f8>
+Did you mean?  radio_button):
+    21:   <p>
+    22:     <%= f.label :user_type %><br>
+    23: 
+    24:     <%= f.radio_button_tag(user_type: "student") %>
+    25:     <%= f.radio_button_tag(user_type: "mentor") %>
+    26:   </p>
+    27:  
+  app/views/users/_form.html.erb:24:in `block in _app_views_users__form_html_erb__3125319703089653123_70324802064960'
+  app/views/users/_form.html.erb:3:in `_app_views_users__form_html_erb__3125319703089653123_70324802064960'
+  app/views/users/new.html.erb:1:in `_app_views_users_new_html_erb___1694338046790292251_70324799652620'
+
+
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (35.7ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-12-07 21:23:25 -0800
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (0.7ms)
+  Rendered users/new.html.erb (2.8ms)
+Completed 500 Internal Server Error in 8ms
+
+SyntaxError (/Users/home-tico/Documents/Parinaz/School/DevBootcamp/phase3/week1/MenMen/app/views/users/_form.html.erb:24: syntax error, unexpected ')', expecting =>
+...(user_type: "student","mentor") );@output_buffer.safe_append...
+...                               ^
+/Users/home-tico/Documents/Parinaz/School/DevBootcamp/phase3/week1/MenMen/app/views/users/_form.html.erb:31: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end ;@output_buffer.to_s
+             ^
+/Users/home-tico/Documents/Parinaz/School/DevBootcamp/phase3/week1/MenMen/app/views/users/_form.html.erb:32: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/home-tico/Documents/Parinaz/School/DevBootcamp/phase3/week1/MenMen/app/views/users/_form.html.erb:34: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/users/_form.html.erb:24: syntax error, unexpected ')', expecting =>
+  app/views/users/_form.html.erb:31: syntax error, unexpected keyword_end, expecting ')'
+  app/views/users/_form.html.erb:32: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/users/_form.html.erb:34: syntax error, unexpected keyword_end, expecting ')'
+  app/views/users/new.html.erb:1:in `_app_views_users_new_html_erb___1694338046790292251_70324799652620'
+
+
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (52.1ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-12-07 21:25:32 -0800
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (7.7ms)
+  Rendered users/new.html.erb (9.1ms)
+Completed 500 Internal Server Error in 13ms
+
+ActionView::Template::Error (undefined method `map' for "student":String
+Did you mean?  tap):
+    21:   <p>
+    22:     <%= f.label :user_type %><br>
+    23: 
+    24:     <%= f.collection_select :user_type, "student","mentor",include_blank: true %>
+    25:   </p>
+    26:  
+    27:   <p>
+  app/views/users/_form.html.erb:24:in `block in _app_views_users__form_html_erb__3125319703089653123_70324802642540'
+  app/views/users/_form.html.erb:3:in `_app_views_users__form_html_erb__3125319703089653123_70324802642540'
+  app/views/users/new.html.erb:1:in `_app_views_users_new_html_erb___1694338046790292251_70324799652620'
+
+
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (52.6ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-12-07 21:26:13 -0800
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (3.9ms)
+  Rendered users/new.html.erb (5.6ms)
+Completed 500 Internal Server Error in 11ms
+
+ActionView::Template::Error (wrong number of arguments (given 2, expected 4..6)):
+    21:   <p>
+    22:     <%= f.label :user_type %><br>
+    23: 
+    24:     <%= f.collection_select :user_type,include_blank: true %>
+    25:   </p>
+    26:  
+    27:   <p>
+  app/views/users/_form.html.erb:24:in `block in _app_views_users__form_html_erb__3125319703089653123_70324810692220'
+  app/views/users/_form.html.erb:3:in `_app_views_users__form_html_erb__3125319703089653123_70324810692220'
+  app/views/users/new.html.erb:1:in `_app_views_users_new_html_erb___1694338046790292251_70324799652620'
+
+
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (35.1ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-12-07 21:26:29 -0800
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (4.1ms)
+  Rendered users/new.html.erb (5.6ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (wrong number of arguments (given 3, expected 4..6)):
+    21:   <p>
+    22:     <%= f.label :user_type %><br>
+    23: 
+    24:     <%= f.collection_select "student","mentor",include_blank: true %>
+    25:   </p>
+    26:  
+    27:   <p>
+  app/views/users/_form.html.erb:24:in `block in _app_views_users__form_html_erb__3125319703089653123_70324810985820'
+  app/views/users/_form.html.erb:3:in `_app_views_users__form_html_erb__3125319703089653123_70324810985820'
+  app/views/users/new.html.erb:1:in `_app_views_users_new_html_erb___1694338046790292251_70324799652620'
+
+
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (36.4ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-12-07 21:27:05 -0800
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (3.5ms)
+  Rendered users/new.html.erb (5.5ms)
+Completed 500 Internal Server Error in 11ms
+
+ActionView::Template::Error (wrong number of arguments (given 3, expected 4..6)):
+    21:   <p>
+    22:     <%= f.label :user_type %><br>
+    23: 
+    24:     <%= f.collection_select :user_type, ["student","mentor"],include_blank: true %>
+    25:   </p>
+    26:  
+    27:   <p>
+  app/views/users/_form.html.erb:24:in `block in _app_views_users__form_html_erb__3125319703089653123_70324803427680'
+  app/views/users/_form.html.erb:3:in `_app_views_users__form_html_erb__3125319703089653123_70324803427680'
+  app/views/users/new.html.erb:1:in `_app_views_users_new_html_erb___1694338046790292251_70324799652620'
+
+
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (36.2ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-12-07 21:27:11 -0800
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (3.9ms)
+  Rendered users/new.html.erb (5.7ms)
+Completed 500 Internal Server Error in 13ms
+
+ActionView::Template::Error (wrong number of arguments (given 2, expected 4..6)):
+    21:   <p>
+    22:     <%= f.label :user_type %><br>
+    23: 
+    24:     <%= f.collection_select :user_type, ["student","mentor"]%>
+    25:   </p>
+    26:  
+    27:   <p>
+  app/views/users/_form.html.erb:24:in `block in _app_views_users__form_html_erb__3125319703089653123_70324811483960'
+  app/views/users/_form.html.erb:3:in `_app_views_users__form_html_erb__3125319703089653123_70324811483960'
+  app/views/users/new.html.erb:1:in `_app_views_users_new_html_erb___1694338046790292251_70324799652620'
+
+
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (37.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-12-07 21:28:18 -0800
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (3.3ms)
+  Rendered users/new.html.erb (5.1ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (wrong number of arguments (given 2, expected 4..6)):
+    21:   <p>
+    22: 
+    23: 
+    24:     <%= f.collection_select :user_type, ["student","mentor"]%>
+    25:   </p>
+    26:  
+    27:   <p>
+  app/views/users/_form.html.erb:24:in `block in _app_views_users__form_html_erb__3125319703089653123_70324804165320'
+  app/views/users/_form.html.erb:3:in `_app_views_users__form_html_erb__3125319703089653123_70324804165320'
+  app/views/users/new.html.erb:1:in `_app_views_users_new_html_erb___1694338046790292251_70324799652620'
+
+
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (34.7ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-12-07 21:29:30 -0800
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (7.0ms)
+  Rendered users/new.html.erb (9.3ms)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-12-07 21:29:48 -0800
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (23.9ms)
+  Rendered users/new.html.erb (25.5ms)
+Completed 500 Internal Server Error in 31ms
+
+ActionView::Template::Error (undefined local variable or method `mentor' for #<#<Class:0x007feb85d65e48>:0x007feb8ad64e30>):
+    21:   <p>
+    22:     <%= f.label :user_type %><br>
+    23: 
+    24:     <%= f.select :user_type, options_for_select(mentor,"student")%>
+    25:   </p>
+    26:  
+    27:   <p>
+  app/views/users/_form.html.erb:24:in `block in _app_views_users__form_html_erb__3125319703089653123_70324811752200'
+  app/views/users/_form.html.erb:3:in `_app_views_users__form_html_erb__3125319703089653123_70324811752200'
+  app/views/users/new.html.erb:1:in `_app_views_users_new_html_erb___1694338046790292251_70324799652620'
+
+
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (35.3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-12-07 21:29:57 -0800
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (2.6ms)
+  Rendered users/new.html.erb (4.0ms)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-12-07 21:30:51 -0800
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (9.3ms)
+  Rendered users/new.html.erb (10.9ms)
+Completed 500 Internal Server Error in 16ms
+
+ActionView::Template::Error (undefined method `usertype' for #<User:0x007feb8ad0b1f0>
+Did you mean?  user_type
+               user_type=
+               user_type?):
+    21:   <p>
+    22:     <%= f.label :user_type %><br>
+    23: 
+    24:     <%= f.select :usertype, options_for_select("mentor","student") %>
+    25:   </p>
+    26:  
+    27:   <p>
+  app/views/users/_form.html.erb:24:in `block in _app_views_users__form_html_erb__3125319703089653123_70324781174960'
+  app/views/users/_form.html.erb:3:in `_app_views_users__form_html_erb__3125319703089653123_70324781174960'
+  app/views/users/new.html.erb:1:in `_app_views_users_new_html_erb___1694338046790292251_70324799652620'
+
+
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (37.1ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-12-07 21:31:11 -0800
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (5.2ms)
+  Rendered users/new.html.erb (6.8ms)
+Completed 500 Internal Server Error in 12ms
+
+ActionView::Template::Error (undefined method `map' for 1:Fixnum
+Did you mean?  tap):
+    21:   <p>
+    22:     <%= f.label :user_type %><br>
+    23: 
+    24:     <%= f.select :user_type, options_for_select(1,3) %>
+    25:   </p>
+    26:  
+    27:   <p>
+  app/views/users/_form.html.erb:24:in `block in _app_views_users__form_html_erb__3125319703089653123_70324803343980'
+  app/views/users/_form.html.erb:3:in `_app_views_users__form_html_erb__3125319703089653123_70324803343980'
+  app/views/users/new.html.erb:1:in `_app_views_users_new_html_erb___1694338046790292251_70324799652620'
+
+
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (36.3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-12-07 21:33:17 -0800
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (2.3ms)
+  Rendered users/new.html.erb (3.9ms)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-12-07 21:34:25 -0800
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (2.4ms)
+  Rendered users/new.html.erb (4.1ms)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-12-07 21:34:40 -0800
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (2.0ms)
+  Rendered users/new.html.erb (3.6ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2016-12-07 21:34:47 -0800
+
+ActionController::RoutingError (No route matches [POST] "/users"):
+  actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.4) lib/rails/engine.rb:514:in `call'
+  railties (4.1.4) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/home-tico/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (60.9ms)

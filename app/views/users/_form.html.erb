@@ -1,0 +1,29 @@
+<h1>Create new account</h1>
+
+<%= form_for :user, url: users_path, method: 'post' do |f| %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :password %><br>
+    <%= f.text_field :password %>
+  </p>
+  <p>
+    <%= f.label :telephone %><br>
+    <%= f.text_field :telephone %>
+  </p>
+ 
+  <section>
+    <%= f.radio_button :user_type, 'student' %>Student<br/>
+    <%= f.radio_button :user_type, 'mentor' %>Mentor<br/>
+  </section>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
