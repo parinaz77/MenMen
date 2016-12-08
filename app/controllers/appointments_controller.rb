@@ -3,7 +3,15 @@ class AppointmentsController < ApplicationController
   end
 
   def show
-    @appointments = current_user.metor_sessions.find(params[:appointment_id])
+    @user = User.find(params[:id])
+    p "=" * 90
+    p @user.user_type
+    p @user.study_sessions.first.topic
+    if @user.user_type == "mentor"
+     @appointment = @user.mentor_sessions.find(params[:user_id])
+   else
+   	@appointment = @user.study_sessions.find(params[:user_id])
+   end
   end
 
   # private
