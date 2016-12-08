@@ -3918,3 +3918,93 @@ Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms)
   [1m[35mFeedback Load (18.2ms)[0m  SELECT "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."user_id" = $1  [["user_id", 1]]
   [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
 >>>>>>> 7a283cc0c9163cf7b16e7fc465ed7880ac673863
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-08 14:33:18 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb (1.3ms)
+Completed 200 OK in 18ms (Views: 9.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-12-08 14:33:26 -0800
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (436.6ms)
+  Rendered users/new.html.erb (440.5ms)
+Completed 200 OK in 452ms (Views: 444.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2016-12-08 14:33:34 -0800
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  Rendered sessions/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/creative.css?body=1" for 127.0.0.1 at 2016-12-08 14:33:34 -0800
+
+
+Started GET "/assets/creative.js?body=1" for 127.0.0.1 at 2016-12-08 14:33:34 -0800
+
+
+Started POST "/sessions" for 127.0.0.1 at 2016-12-08 14:33:43 -0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gvSTnRDN3CX2Q0DEEuWewLzrjSg2pLLmVlCwrKbXiSA=", "email"=>"jana@swiftdoyle.net", "password"=>"[FILTERED]", "commit"=>"Submit"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'jana@swiftdoyle.net' LIMIT 1[0m
+Redirected to http://localhost:3000/users/14
+Completed 302 Found in 71ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/users/14" for 127.0.0.1 at 2016-12-08 14:33:43 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 14]]
+  [1m[36mAppointment Load (0.4ms)[0m  [1mSELECT "appointments".* FROM "appointments"  WHERE "appointments"."student_id" = $1[0m  [["student_id", 14]]
+  [1m[35mFeedback Load (1.3ms)[0m  SELECT "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."user_id" = $1  [["user_id", 14]]
+  Rendered users/show.html.erb (53.4ms)
+Completed 200 OK in 59ms (Views: 52.4ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/users/14" for 127.0.0.1 at 2016-12-08 14:40:53 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 14]]
+  [1m[35mAppointment Load (0.2ms)[0m  SELECT "appointments".* FROM "appointments"  WHERE "appointments"."student_id" = $1  [["student_id", 14]]
+  [1m[36mFeedback Load (0.2ms)[0m  [1mSELECT "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."user_id" = $1[0m  [["user_id", 14]]
+  Rendered users/show.html.erb (2.5ms)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/14" for 127.0.0.1 at 2016-12-08 14:40:55 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 14]]
+  [1m[36mAppointment Load (0.2ms)[0m  [1mSELECT "appointments".* FROM "appointments"  WHERE "appointments"."student_id" = $1[0m  [["student_id", 14]]
+  [1m[35mFeedback Load (0.2ms)[0m  SELECT "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."user_id" = $1  [["user_id", 14]]
+  Rendered users/show.html.erb (1.8ms)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/14" for 127.0.0.1 at 2016-12-08 14:41:24 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 14]]
+  [1m[35mAppointment Load (0.2ms)[0m  SELECT "appointments".* FROM "appointments"  WHERE "appointments"."student_id" = $1  [["student_id", 14]]
+  Rendered users/show.html.erb (8.9ms)
+Completed 500 Internal Server Error in 13ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"appointments", :format=>nil, :id=>nil, :user_id=>#<Appointment id: 6, mentor_id: 19, student_id: 14, topic: "Salvia bitters tote bag literally kinfolk venmo ga...", start_time: "2016-12-08 14:19:10", end_time: "2016-12-08 15:45:57", created_at: "2016-12-08 19:07:39", updated_at: "2016-12-08 19:07:39">} missing required keys: [:id]):
+    20:     <% @user.study_sessions.each do |time| %>
+    21:     <ul>
+    22:       <li>
+    23:       <p>Start time: <%= link_to time.start_time, user_appointment_path(time) %>
+    24:         End time: <%= time.end_time %>
+    25:       </p>
+    26:       </li>
+  app/views/users/show.html.erb:23:in `block in _app_views_users_show_html_erb___1815629414208670235_70224065235100'
+  app/views/users/show.html.erb:20:in `_app_views_users_show_html_erb___1815629414208670235_70224065235100'
+
+
+  Rendered /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/dawithailu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (40.7ms)
