@@ -1,6 +1,6 @@
-
 <% if logged_in? %>
         Logged in as: <strong><%= current_user.email %></strong>
+
         <%= button_to "Logout", session_path(current_user.id), method: "delete", :class => 'navbar-link'  %>
       <% else %>
         <%= link_to "Sign up", new_user_path, :class => 'navbar-link'  %> |

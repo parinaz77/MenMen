@@ -3,7 +3,6 @@ class UsersController < ActionController::Base
 	before_action :user_params, only: [:create]
 
 	def new
-		session = nil
 		@user = User.new
 	end
 
