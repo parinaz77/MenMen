@@ -15,8 +15,10 @@ require 'faker'
   }
 
   20.times {
-    Appointment.create(mentor_id:rand(16..20) ,student_id:rand(1..15), topic: Faker::Hipster.sentence ,start_time: Faker::Time.between(DateTime.now - 1, DateTime.now) ,end_time: Faker::Time.between(DateTime.now - 1, DateTime.now))
-    Appointment.create(mentor_id:rand(16..20) ,topic: Faker::Hipster.sentence ,start_time: Faker::Time.between(DateTime.now - 1, DateTime.now) ,end_time: Faker::Time.between(DateTime.now - 1, DateTime.now))
+    start_at = Faker::Time.between(DateTime.now - 7, DateTime.now)
+    start_end = start_at + 30.minutes
+    Appointment.create(mentor_id:rand(16..20) ,student_id:rand(1..15), topic: Faker::Hipster.sentence ,start_time: start_at ,end_time: start_end)
+    Appointment.create(mentor_id:rand(16..20) ,topic: Faker::Hipster.sentence ,start_time: start_at ,end_time: start_end )
   }
 
   20.times do |i|

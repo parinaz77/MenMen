@@ -30,6 +30,7 @@ gem 'spring',        group: :development
 gem 'bcrypt', '~> 3.1.7'
 
 gem 'faker'
+gem "simple_calendar", "~> 2.0"
 # Use unicorn as the app server
 # gem 'unicorn'
 
