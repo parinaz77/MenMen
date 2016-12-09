@@ -57,16 +57,37 @@
       <%= f.submit %>
     </p>
   <% end %>
+
+
 <% else %>
+
+<h3><strong>Upcoming Appointments:</strong></h3>
   <% @user.study_sessions.each do |study_session| %>
-    <ul>
-      <li>
-        <p>Start time: <%= link_to study_session.start_time, user_appointment_path(@user.id,study_session.id) %>
-          End time: <%= study_session.end_time %>
-        </p>
-      </li>
-    </ul>
+    <% if study_session.start_time.future? %>
+      <ul>
+          <li>
+          Start time: <%= link_to study_session.start_time, user_appointment_path(@user.id,study_session.id) %>
+          End time: <%= study_session.start_time + 30.minutes %>
+        </li>
+      </ul>
+    <% end %>
   <% end %>
+
+    <h3><strong>Past Appointments:</strong></h3>
+    <% @user.study_sessions.each do |study_session| %>
+      <% if !study_session.start_time.future? %>
+      <ul>
+          <li>
+          Start time: <%= link_to study_session.start_time, user_appointment_path(@user.id,study_session.id) %>
+          End time: <%= study_session.start_time + 30.minutes %>
+        </li>
+      </ul>
+      <% end %>
+    <% end %>
+  <br>
+  <br>
+  
+
   <h3>Appointments Available:</h3>
     <% open_sessions = Appointment.all.select{|apt| apt.student_id == nil} %>
     <% open_sessions.each do |session| %>
