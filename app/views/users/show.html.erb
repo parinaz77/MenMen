@@ -6,27 +6,60 @@
 
 <strong>Appointments:</strong>
 
- <% if @user.user_type == 'mentor' %>
+ <% if @user.user_type == 'mentor' %>end
+      t.integer :student_id
+      t.string :topic
+      t.datetime :start_time
+      t.datetime :end_time
+
+      t.timestamps
     <% @user.mentor_sessions.each do |mentor_session| %>
   <ul>
     <li>
-    Start time: <%= link_to mentor_session.start_time, user_appointment_path(mentor_session.id, @user.id) %>
+
+    Start time: <%= link_to mentor_session.start_time, user_appointment_path(@user.id,mentor_session.id) %>
+
       End time: <%= mentor_session.end_time %>
     </p>
     </li>
   </ul>
     <% end %>
+ 
+
+      <%= form_for :appointment, url: user_appointments_path(@user.id), method: 'post' do |f| %>
+        
+        
+        <p>
+          <%= f.label :start_time %><br>
+          <%= f.date_field :start_time %>
+        </p>
+
+        <p>
+          <%= f.label :end_time %><br>
+          <%= f.date_field :end_time %>
+        </p>
+
+        <p>
+          <%= f.label :topic %><br>
+          <%= f.text_field :topic %>
+        </p>
+       
+        <p>
+          <%= f.label :create %><br>
+          <%= f.submit %>
+        </p>
+      <% end %>
+
+
   <% else %>
     <% @user.study_sessions.each do |study_session| %>
     <ul>
       <li>
-      <p>Start time: <%= link_to study_session.start_time, user_appointment_path(study_session.id, @user.id) %>
+      <p>Start time: <%= link_to study_session.start_time, user_appointment_path(@user.id,study_session.id) %>
         End time: <%= study_session.end_time %>
       </p>
       </li>
     </ul>
     <% end %>
   <% end %>
-
-
 

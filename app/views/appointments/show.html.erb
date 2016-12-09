@@ -7,3 +7,14 @@ Student: <%= @appointment.student.name%>
 
 </div>
 
+<div>
+	<strong>Feedback:</strong>
+	<% @appointment.feedbacks.each do |feedback| %>
+  	<ul>
+    	<li><p><%= feedback.body %></p></li>
+  	</ul>
+	<% end %>
+
+</div>>
+	
+<%= render 'feedback/form' %>
