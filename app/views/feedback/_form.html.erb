@@ -1,0 +1,7 @@
+<%= form_for :feedback, url: user_appointment_feedbacks_path(@user, @appointment), method:'post' do |f|  %>
+<p><strong> Leave Feedback:</strong></p>
+<%= f.text_area( :body ,size: "100x15") %>
+<%= f.submit "Submit"  %>
+
+<% end %>
+

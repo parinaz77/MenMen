@@ -28,9 +28,16 @@ class AppointmentsController < ApplicationController
     p a
    redirect_to user_appointment_path(@appointment)
   end
+    @user = User.find(params[:user_id])
+   
+    if @user.user_type == "mentor"
+      @appointment = @user.mentor_sessions.find(params[:id])
+    else
+   	  @appointment = @user.study_sessions.find(params[:id])
+    end
+  end
   # private
 
   # def comment_params
   #   params.require(:appointment).permit(:commenter, :body)
   # end
-end
