@@ -66,3 +66,7 @@ class AppointmentsController < ApplicationController
   # def comment_params
   #   params.require(:appointment).permit(:commenter, :body)
   end
+
+
+
+
