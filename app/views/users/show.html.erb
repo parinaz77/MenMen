@@ -10,6 +10,7 @@
  <% if @user.user_type == 'mentor' %>
 
  <%= link_to "Create a new appointment", new_user_appointment_path(@user)  %>
+ 
     <% @user.mentor_sessions.each do |mentor_session| %>
     <ul>
         <li>
