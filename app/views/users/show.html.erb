@@ -60,5 +60,17 @@
       </li>
     </ul>
     <% end %>
+    <h1>Upcoming Sessions</h1>
+    <% open_sessions = Appointment.all.select{|apt| apt.student_id == nil} %>
+
+    <% open_sessions.each do |session| %>
+          <div>
+            <span><%= session.mentor.name %></span> on
+            <%= session.topic %>
+          </div>
+          <div>
+            <%= button_to "Signup", user_appointment_path(current_user.id, session.id), method: "put", :class => 'appointment'  %>
+          </div>
+    <% end %>
   <% end %>
 

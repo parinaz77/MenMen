@@ -41,31 +41,13 @@ class AppointmentsController < ApplicationController
   #   args = params[:appointment]
   #  args[:mentor_id] = params[:user_id]
    
-  
-  #  a = Appointment.create(appointment_params)
-   
-  # redirect_to user_appointment_path(@appointment)
+  end
 
-  #   a = User.new_appointment(args)
-  #   p "=" * 88
-  #   p a
-  #  redirect_to user_appointment_path(@appointment)
+  # def update
+  #     appointment = Appointment.find(params[:id])
+  #     appointment.update(student_id: params[:user_id])
+  #     redirect_to user_path(params[:user_id])
   # end
-  #   @user = User.find(params[:user_id])
-   
-  #   if @user.user_type == "mentor"
-  #     @appointment = @user.mentor_sessions.find(params[:id])
-  #   else
-  #  	  @appointment = @user.study_sessions.find(params[:id])
-  #   end
-  end
-
-  # private
-
-  # def comment_params
-  #   params.require(:appointment).permit(:commenter, :body)
-  end
-
-
-
+  
+end
 

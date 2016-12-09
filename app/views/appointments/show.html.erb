@@ -5,6 +5,10 @@
 <strong>Mentor:</strong> <%= @appointment.mentor.name %>
 
 	
+Title: <%= @appointment.topic%>
+Mentor: <%= @appointment.mentor.name %>
+Student: <%= @appointment.student.name if @appointment.student_id != nil%>	
+
 
 </div>
 
