@@ -19,23 +19,22 @@ class AppointmentsController < ApplicationController
   end
 
 
-  def create
+  def create    
+    @user = User.find(params[:user_id])
 
-    p "%" * 34
-    p params
+    start_time = params[:appointment][:start_time]
+    end_time = params[:appointment][:end_time]
+    topic = params[:appointment][:topic]
+
+    appointment = Appointment.new(mentor_id: params[:user_id], 
+                                  start_time: start_time, 
+                                  end_time: end_time, 
+                                  topic: topic )
     
-  @user = User.find(params[:user_id])
-
-  start_time = params[:appointment][:start_time]
-  end_time = params[:appointment][:end_time]
-  topic = params[:appointment][:topic]
-
-  appointment = Appointment.new(mentor_id: params[:user_id], start_time: start_time, end_time: end_time, topic: topic )
-  
-  if appointment.save
-     redirect_to user_path(@user)
-     flash[:alert] = "Session slot created successfully!"
-  end
+    if appointment.save
+       redirect_to user_path(@user)
+       flash[:alert] = "Session slot created successfully!"
+    end
   #   args = params[:appointment]
   #   args[:mentor_id] = params[:user_id]
     

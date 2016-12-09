@@ -5,7 +5,7 @@ class FeedbacksController < ApplicationController
 	end
 
 	def new
-		feedback = Feedback.new
+		@feedback = Feedback.new
 	end
 
 	def create
@@ -13,7 +13,10 @@ class FeedbacksController < ApplicationController
 		@appointment = Appointment.find(params[:appointment_id])
 
 		
-		@feedback = Feedback.new(body: params[:feedback][:body], appointment_id: @appointment.id, user_id: @user.id, rating: params[:feedback][:rating])
+		@feedback = Feedback.new(body: params[:feedback][:body], 
+								appointment_id: @appointment.id, 
+								user_id: @user.id, 
+								rating: params[:feedback][:rating])
 
 		if @feedback.save
 			redirect_to user_appointment_path(@user.id, @appointment.id)

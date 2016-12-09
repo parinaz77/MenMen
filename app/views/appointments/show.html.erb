@@ -1,9 +1,10 @@
 
 <div>
+<br>
+<strong>Title: </strong><%= @appointment.topic%> <br>
+<strong>Mentor:</strong> <%= @appointment.mentor.name %>
 
-Title: <%= @appointment.topic%>
-Mentor: <%= @appointment.mentor.name %>
-Student: <%= @appointment.student.name%>	
+	
 
 </div>
 
@@ -15,6 +16,6 @@ Student: <%= @appointment.student.name%>
   	</ul>
 	<% end %>
 
-</div>>
+</div>
 	
 <%= render 'feedback/form' %>
