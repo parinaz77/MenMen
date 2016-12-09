@@ -43,11 +43,11 @@ class AppointmentsController < ApplicationController
    
   end
 
-  # def update
-  #     appointment = Appointment.find(params[:id])
-  #     appointment.update(student_id: params[:user_id])
-  #     redirect_to user_path(params[:user_id])
-  # end
+  def update
+      appointment = Appointment.find(params[:id])
+      appointment.update(student_id: params[:user_id])
+      redirect_to user_path(params[:user_id])
+  end
   
 # end
 
