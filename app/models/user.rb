@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+	#Will add validations
   has_secure_password
   
   has_many :mentor_sessions, class_name: "Appointment", foreign_key: "mentor_id"
