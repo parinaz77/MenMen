@@ -49,23 +49,22 @@ class AppointmentsController < ApplicationController
   #     redirect_to user_path(params[:user_id])
   # end
   
+# end
+
+  # appointment = Appointment.new(mentor_id: params[:user_id], start_time: start_time, end_time: end_time, topic: topic )
+  
+  # if appointment.save
+  #    redirect_to user_path(@user)
+  #    flash[:alert] = "Session slot created successfully!"
+  # end
+  
+  # end
+
+  # def update
+  #     appointment = Appointment.find(params[:id])
+  #     appointment.update(student_id: params[:user_id])
+  #     redirect_to user_path(params[:user_id])
+  # end
+  
 end
 
-=======
-  appointment = Appointment.new(mentor_id: params[:user_id], start_time: start_time, end_time: end_time, topic: topic )
-  
-  if appointment.save
-     redirect_to user_path(@user)
-     flash[:alert] = "Session slot created successfully!"
-  end
-  
-  end
-
-  def update
-      appointment = Appointment.find(params[:id])
-      appointment.update(student_id: params[:user_id])
-      redirect_to user_path(params[:user_id])
-  end
-  
-end
->>>>>>> 9763713f88d64c9a0cfcf7604a9f109fcfb0cdd2
