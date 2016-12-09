@@ -1,9 +1,10 @@
 
 <div>
-
-Title: <%= @appointment.topic%>
-Mentor: <%= @appointment.mentor.name %>
-Student: <%= @appointment.student.name if @appointment.student_id != nil%>	
+<br>
+	
+<strong>Title: </strong><%= @appointment.topic%><br>
+<strong>Mentor: </strong><%= @appointment.mentor.name %><br>
+<strong>Student:</strong> <%= @appointment.student.name if @appointment.student_id != nil%><br>	
 
 </div>
 
@@ -15,6 +16,6 @@ Student: <%= @appointment.student.name if @appointment.student_id != nil%>
   	</ul>
 	<% end %>
 
-</div>>
+</div>
 	
 <%= render 'feedback/form' %>

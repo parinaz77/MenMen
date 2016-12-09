@@ -1,1 +1,24 @@
-<p>hi</p>
+<p><strong> Create new available spots for students:</strong></p>
+      <%= form_for :appointment, url: user_appointments_path(@user), method: 'post' do |f| %>
+        
+        
+        <p>
+          <%= f.label :start_time %><br>
+          <%= f.date_field :start_time %>
+        </p>
+
+        <p>
+          <%= f.label :end_time %><br>
+          <%= f.date_field :end_time %>
+        </p>
+
+        <p>
+          <%= f.label :topic %><br>
+          <%= f.text_field :topic %>
+        </p>
+       
+        <p>
+          <%= f.label :create %><br>
+          <%= f.submit %>
+        </p>
+      <% end %>

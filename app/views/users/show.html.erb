@@ -6,26 +6,25 @@
 
 <strong>Appointments:</strong>
 
- <% if @user.user_type == 'mentor' %>end
-      t.integer :student_id
-      t.string :topic
-      t.datetime :start_time
-      t.datetime :end_time
+ <% if @user.user_type == 'mentor' %>
 
-      t.timestamps
+ <%= link_to "Create a new appointment", new_user_appointment_path(@user)  %>
     <% @user.mentor_sessions.each do |mentor_session| %>
-  <ul>
-    <li>
+    <ul>
+        <li>
+      Start time: <%= link_to mentor_session.start_time, user_appointment_path(@user.id,mentor_session.id) %>
 
-    Start time: <%= link_to mentor_session.start_time, user_appointment_path(@user.id,mentor_session.id) %>
-
-      End time: <%= mentor_session.end_time %>
-    </p>
+      ----End time: <%= mentor_session.end_time %>
     </li>
   </ul>
     <% end %>
- 
 
+
+ <br>
+ <br>
+ <br>
+ <br>
+      <p><strong> Create new available spots for students:</strong></p>
       <%= form_for :appointment, url: user_appointments_path(@user.id), method: 'post' do |f| %>
         
         
