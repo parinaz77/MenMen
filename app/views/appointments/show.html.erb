@@ -3,7 +3,7 @@
 
 Title: <%= @appointment.topic%>
 Mentor: <%= @appointment.mentor.name %>
-Student: <%= @appointment.student.name%>	
+Student: <%= @appointment.student.name if @appointment.student_id != nil%>	
 
 </div>
 

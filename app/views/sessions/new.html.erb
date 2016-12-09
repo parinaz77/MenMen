@@ -1,6 +1,9 @@
 
 <h1>Login</h1>
-<%= User.all.sample.email %>
+<% students =  User.all.select{|u| u.user_type == "student"}%>
+<% mentors =  User.all.select{|u| u.user_type == "mentor"}%>
+<strong>random student: </strong><%= students.sample.email %> 
+<strong>random mentor:</strong><%= mentors.sample.email %> 
 <%= form_tag sessions_path do %>
 
   Email: <%= text_field_tag :email %>
