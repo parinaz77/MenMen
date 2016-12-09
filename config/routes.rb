@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :feedbacks, except: [:edit, :delete]
   end
 
-  resources :sessions, only: [:new, :create, :destroy] 
+  resources :sessions, only: [:new, :create, :destroy]
+  delete '/logout', to: 'sessions#destroy' 
   
 end
