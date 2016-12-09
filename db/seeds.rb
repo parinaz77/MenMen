@@ -16,6 +16,7 @@ require 'faker'
 
   20.times {
     Appointment.create(mentor_id:rand(16..20) ,student_id:rand(1..15), topic: Faker::Hipster.sentence ,start_time: Faker::Time.between(DateTime.now - 1, DateTime.now) ,end_time: Faker::Time.between(DateTime.now - 1, DateTime.now))
+    Appointment.create(mentor_id:rand(16..20) ,topic: Faker::Hipster.sentence ,start_time: Faker::Time.between(DateTime.now - 1, DateTime.now) ,end_time: Faker::Time.between(DateTime.now - 1, DateTime.now))
   }
 
   20.times do |i|

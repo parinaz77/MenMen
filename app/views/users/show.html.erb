@@ -7,31 +7,70 @@
 <strong>Appointments:</strong>
 
  <% if @user.user_type == 'mentor' %>
+
+ <%= link_to "Create a new appointment", new_user_appointment_path(@user)  %>
     <% @user.mentor_sessions.each do |mentor_session| %>
-  <ul>
-    <li>
-    Start time: <%= link_to time.start_time, user_appointment_path(mentor_session.id, @user.id) %>
-      End time: <%= mentor_session.end_time %>
-    </p>
+    <ul>
+        <li>
+      Start time: <%= link_to mentor_session.start_time, user_appointment_path(@user.id,mentor_session.id) %>
+
+      ----End time: <%= mentor_session.end_time %>
     </li>
   </ul>
     <% end %>
+
+
+ <br>
+ <br>
+ <br>
+ <br>
+      <p><strong> Create new available spots for students:</strong></p>
+      <%= form_for :appointment, url: user_appointments_path(@user.id), method: 'post' do |f| %>
+        
+        
+        <p>
+          <%= f.label :start_time %><br>
+          <%= f.date_field :start_time %>
+        </p>
+
+        <p>
+          <%= f.label :end_time %><br>
+          <%= f.date_field :end_time %>
+        </p>
+
+        <p>
+          <%= f.label :topic %><br>
+          <%= f.text_field :topic %>
+        </p>
+       
+        <p>
+          <%= f.label :create %><br>
+          <%= f.submit %>
+        </p>
+      <% end %>
+
+
   <% else %>
     <% @user.study_sessions.each do |study_session| %>
     <ul>
       <li>
-      <p>Start time: <%= link_to study_session.start_time, user_appointment_path(study_session.id, @user.id) %>
+      <p>Start time: <%= link_to study_session.start_time, user_appointment_path(@user.id,study_session.id) %>
         End time: <%= study_session.end_time %>
       </p>
       </li>
     </ul>
     <% end %>
+    <h1>Upcoming Sessions</h1>
+    <% open_sessions = Appointment.all.select{|apt| apt.student_id == nil} %>
+
+    <% open_sessions.each do |session| %>
+          <div>
+            <span><%= session.mentor.name %></span> on
+            <%= session.topic %>
+          </div>
+          <div>
+            <%= button_to "Signup", user_appointment_path(current_user.id, session.id), method: "put", :class => 'appointment'  %>
+          </div>
+    <% end %>
   <% end %>
 
-
-<strong>Feedback:</strong>
-<% @user.feedbacks.each do |feedback| %>
-  <ul>
-    <li><p><%= feedback.body %></p></li>
-  </ul>
-<% end %>
