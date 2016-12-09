@@ -1,77 +1,60 @@
 <p>
-  <strong>Name:</strong>
-  <%= @user.name %>
+  <img height="100px" width="100" src="<%= @user.avatar %>" />
+  <strong>Hello </strong><%= @user.name %><br>  
 </p>
+
+<h3><strong>Upcoming Appointments:</strong></h3>
+
+<% if @user.user_type == 'mentor' %>
+
+  <%= link_to "Create a new appointment", new_user_appointment_path(@user) %>
  
-
-<strong>Appointments:</strong>
-
- <% if @user.user_type == 'mentor' %>
-
- <%= link_to "Create a new appointment", new_user_appointment_path(@user)  %>
- 
-    <% @user.mentor_sessions.each do |mentor_session| %>
-    <ul>
-        <li>
-      Start time: <%= link_to mentor_session.start_time, user_appointment_path(@user.id,mentor_session.id) %>
-
-      ----End time: <%= mentor_session.end_time %>
-    </li>
-  </ul>
-    <% end %>
-
-
- <br>
- <br>
- <br>
- <br>
-      <p><strong> Create new available spots for students:</strong></p>
-      <%= form_for :appointment, url: user_appointments_path(@user.id), method: 'post' do |f| %>
-        
-        
-        <p>
-          <%= f.label :start_time %><br>
-          <%= f.date_field :start_time %>
-        </p>
-
-        <p>
-          <%= f.label :end_time %><br>
-          <%= f.date_field :end_time %>
-        </p>
-
-        <p>
-          <%= f.label :topic %><br>
-          <%= f.text_field :topic %>
-        </p>
-       
-        <p>
-          <%= f.label :create %><br>
-          <%= f.submit %>
-        </p>
-      <% end %>
-
-
-  <% else %>
-    <% @user.study_sessions.each do |study_session| %>
+  <% @user.mentor_sessions.each do |mentor_session| %>
     <ul>
       <li>
-      <p>Start time: <%= link_to study_session.start_time, user_appointment_path(@user.id,study_session.id) %>
-        End time: <%= study_session.end_time %>
-      </p>
+        Start time: <%= link_to mentor_session.start_time, user_appointment_path(@user.id,mentor_session.id) %>
+        End time: <%= mentor_session.start_time + 30.minutes %>
+    </li>
+  </ul>
+  <% end %>
+
+  <p><strong> Create new available spots for students:</strong></p>
+  <%= form_for :appointment, url: user_appointments_path(@user.id), method: 'post' do |f| %> 
+    <p>
+      <%= f.label :start_time %><br>
+      <%=  f.datetime_local_field :start_time %>
+    </p>
+
+    <p>
+      <%= f.label :topic %><br>
+      <%= f.text_field :topic %>
+    </p>
+   
+    <p>
+      <%= f.label :create %><br>
+      <%= f.submit %>
+    </p>
+  <% end %>
+<% else %>
+  <% @user.study_sessions.each do |study_session| %>
+    <ul>
+      <li>
+        <p>Start time: <%= link_to study_session.start_time, user_appointment_path(@user.id,study_session.id) %>
+          End time: <%= study_session.end_time %>
+        </p>
       </li>
     </ul>
-    <% end %>
-    <h1>Upcoming Sessions</h1>
-    <% open_sessions = Appointment.all.select{|apt| apt.student_id == nil} %>
-
-    <% open_sessions.each do |session| %>
-          <div>
-            <span><%= session.mentor.name %></span> on
-            <%= session.topic %>
-          </div>
-          <div>
-            <%= button_to "Signup", user_appointment_path(current_user.id, session.id), method: "put", :class => 'appointment'  %>
-          </div>
-    <% end %>
   <% end %>
+  <h3>Appointments Available:</h3>
+    <% open_sessions = Appointment.all.select{|apt| apt.student_id == nil} %>
+    <% open_sessions.each do |session| %>
+      <div>
+        <span><%= session.mentor.name %></span> on
+            <%= session.topic %>
+      </div>
+      <div>
+        <%= button_to "Signup", user_appointment_path(current_user.id, session.id), method: "put", :class => 'appointment'  %>
+      </div>
+    <% end %>
+<% end %>
 

@@ -15,7 +15,7 @@
     		<li><p><%= feedback.body %></p></li>
   		</ul>
 	<% end %>
-
 </div>
-	
-<%= render 'feedback/form' %>
+<% if @appointment.start_time.past? %>
+	<%= render 'feedback/form' %>
+  <% end %>
