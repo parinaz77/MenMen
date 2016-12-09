@@ -10,7 +10,7 @@
     <% @user.mentor_sessions.each do |mentor_session| %>
   <ul>
     <li>
-    Start time: <%= link_to time.start_time, user_appointment_path(mentor_session.id, @user.id) %>
+    Start time: <%= link_to mentor_session.start_time, user_appointment_path(mentor_session.id, @user.id) %>
       End time: <%= mentor_session.end_time %>
     </p>
     </li>
@@ -29,9 +29,4 @@
   <% end %>
 
 
-<strong>Feedback:</strong>
-<% @user.feedbacks.each do |feedback| %>
-  <ul>
-    <li><p><%= feedback.body %></p></li>
-  </ul>
-<% end %>
+
