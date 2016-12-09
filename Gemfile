@@ -38,6 +38,3 @@ gem 'faker'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
-
-gem 'materialize-sass'

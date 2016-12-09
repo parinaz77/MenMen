@@ -1,6 +1,6 @@
 class UsersController < ActionController::Base
 	layout "application"
-	before_action :user_params, only: [:create]
+	# before_action :user_params, only: [:create]
 
 	def new
 		@user = User.new

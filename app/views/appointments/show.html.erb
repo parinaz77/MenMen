@@ -11,9 +11,9 @@
 <div>
 	<strong>Feedback:</strong>
 	<% @appointment.feedbacks.each do |feedback| %>
-  	<ul>
-    	<li><p><%= feedback.body %></p></li>
-  	</ul>
+  		<ul>
+    		<li><p><%= feedback.body %></p></li>
+  		</ul>
 	<% end %>
 </div>
 <% if @appointment.start_time.past? %>
