@@ -1,15 +1,34 @@
-<table>
-	<tr>
-		<% if logged_in? %>
-		  <td class = 'button'><%= link_to "Profile", user_path(@user), :class => 'navbar-link' %> </td>
-		  <td class = 'button'>	<%= button_to "Logout", session_path(current_user.id), method: "delete", :class => 'navbar-link' %></td>
-		  <td class = 'button'>Logged in as: <strong><%= current_user.email %></strong>(<%= current_user.user_type %>) </td> 
-		<% else %>
-		  <td class = 'button'>	<%= link_to "Sign up", new_user_path, :class => 'navbar-link' %></td>
-		  <td class = 'button'>	<%= link_to "Login", new_session_path, :class => 'navbar-link' %></td>
-		<% end %>
-	</tr>
-
-</table>
+<div>
+	<nav class="navbar navbar-inverse f_color">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<table>
+					<tr>
+						<% if logged_in? %>
+						  <td ><%= link_to "Profile", user_path(current_user.id), :class => 'navbar-link' %> </td>
+						  <td> <span class="glyphicon glyphicon-asterisk"></span> </td>
+						  <td> <span class="glyphicon glyphicon-asterisk"></span> </td>
+						  <td> <span class="glyphicon glyphicon-asterisk"></span> </td>
 
 
+						  <td >Logged in as: <strong><%= current_user.email %></strong>(<%= current_user.user_type %>) </td> 
+						  <td> <span class="glyphicon glyphicon-asterisk"></span> </td>
+						  <td> <span class="glyphicon glyphicon-asterisk"></span> </td>
+						  <td> <span class="glyphicon glyphicon-asterisk"></span> </td>
+
+						  <td class="btn btn-danger navbar-btn">	<%= button_to "Logout", session_path(current_user.id), method: "delete", :class => 'navbar-link', :class=>"butten_hide" %></td>
+
+						<% else %>
+						  <td >	<%= link_to "Sign up", new_user_path, :class => 'navbar-link' %></td>
+						  <td> <span class="glyphicon glyphicon-asterisk"></span> </td>
+						  <td> <span class="glyphicon glyphicon-asterisk"></span> </td>
+						  <td> <span class="glyphicon glyphicon-asterisk"></span> </td>
+						  <td >	<%= link_to "Login", new_session_path, :class => 'navbar-link' %></td>
+						<% end %>
+					</tr>
+
+				</table>
+			</div>
+		</div>
+	</nav>
+</div>

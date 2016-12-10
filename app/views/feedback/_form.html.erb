@@ -1,6 +1,6 @@
 <%= form_for :feedback, url: user_appointment_feedbacks_path(@user, @appointment), method:'post' do |f|  %>
 <p><strong> Leave Feedback:</strong></p>
-
+<%= "Select your rating:" %>
 <%= f.select :rating, [1, 2,3,4,5]%>
 <br>
 <br>

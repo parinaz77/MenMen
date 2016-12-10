@@ -413,6 +413,7 @@ img::-moz-selection {
 }
 body {
   webkit-tap-highlight-color: #222222;
+  padding: 20px;
 }
 
 .button {
@@ -424,4 +425,24 @@ body {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+}
+
+.butten_hide{
+  background: none;
+  border:none;
+  padding:0;
+
+}
+.f_color{
+  color:white;
+}
+
+hr { 
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
 }

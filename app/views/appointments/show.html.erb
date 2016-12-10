@@ -7,15 +7,25 @@
 <strong>Student:</strong> <%= @appointment.student.name if @appointment.student_id != nil%><br>	
 
 </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+
 
 <div>
-	<strong>Feedback:</strong>
+	<strong>Feedbacks:</strong>
 	<% @appointment.feedbacks.each do |feedback| %>
   		<ul>
     		<li><p><%= feedback.body %></p></li>
   		</ul>
 	<% end %>
 </div>
+<br>
+<br>
+<br>
+
 <% if @appointment.start_time.past? %>
 	<%= render 'feedback/form' %>
   <% end %>
