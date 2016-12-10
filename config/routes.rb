@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     	resources :feedbacks, except: [:edit, :delete]
 	end
   end
-
+  resources :calendars, only: [:index]
   resources :sessions, only: [:new, :create, :destroy]
   delete '/logout', to: 'sessions#destroy', as: 'logout'
   
