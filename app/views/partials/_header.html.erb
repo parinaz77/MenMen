@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div>
 	<nav class="navbar navbar-inverse f_color">
 		<div class="container-fluid">
@@ -10,11 +11,17 @@
 						  <td> <span class="glyphicon glyphicon-asterisk"></span> </td>
 						  <td> <span class="glyphicon glyphicon-asterisk"></span> </td>
 
+						  <%= link_to "Calendar", calendars_path, :class => 'navbar-link' %> 
+						  <td> <span class="glyphicon glyphicon-asterisk"></span> </td>
+						  <td> <span class="glyphicon glyphicon-asterisk"></span> </td>
+						  <td> <span class="glyphicon glyphicon-asterisk"></span> </td>
+
 
 						  <td >Logged in as: <strong><%= current_user.email %></strong>(<%= current_user.user_type %>) </td> 
 						  <td> <span class="glyphicon glyphicon-asterisk"></span> </td>
 						  <td> <span class="glyphicon glyphicon-asterisk"></span> </td>
 						  <td> <span class="glyphicon glyphicon-asterisk"></span> </td>
+
 
 						  <td class="btn btn-danger navbar-btn">	<%= button_to "Logout", session_path(current_user.id), method: "delete", :class => 'navbar-link', :class=>"butten_hide" %></td>
 
@@ -32,3 +39,5 @@
 		</div>
 	</nav>
 </div>
+=======
+>>>>>>> ff714d85f833942090e77bc7639988a2c0ebf019

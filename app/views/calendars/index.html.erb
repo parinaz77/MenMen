@@ -1,0 +1,31 @@
+<% if current_user %>
+
+
+  <% open_sessions = Appointment.all.select{|apt| apt.student_id == nil} %>
+
+  <%= week_calendar events: Appointment.all do |date, appointments| %>
+    <b><%= date %></b>
+
+    <% appointments.each do |appointment| %>
+      <div>
+        <br>
+        <%= appointment.start_time.strftime("%I:%M%p") %>
+        Mentor: <%= appointment.mentor.name %>
+        Topic: <%= appointment.topic %>
+
+         <% if current_user.user_type == 'student' && open_sessions.include?(appointment) %>
+          <%= button_to "Signup", user_appointment_path(current_user.id, session.id), method: "put", :class => 'appointment'  %> 
+        <% end %>
+        <hr>
+        <br> 
+        <br>
+      </div>
+    <% end %>
+
+  <% end %>
+
+<% else %>
+<br>
+Login to see the calendar!
+
+<% end %>
