@@ -3,6 +3,7 @@
 <% if flash[:errors] %>
     <div class="errors"><%= flash[:errors] %></div>
 <% end %>
+
 <% students =  User.all.select{|u| u.user_type == "student"}%>
 <% mentors =  User.all.select{|u| u.user_type == "mentor"}%>
 <strong>Random-Student: </strong><%= students.sample.email %> <br>
