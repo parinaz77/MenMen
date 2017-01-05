@@ -413,4 +413,76 @@ img::-moz-selection {
 }
 body {
   webkit-tap-highlight-color: #222222;
+  padding: 20px;
 }
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.butten_hide{
+  background: none;
+  border:none;
+  padding:0;
+
+}
+.f_color{
+  color:white;
+}
+
+hr { 
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+}
+
+.bg-1 {
+  background-image: url('pic.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.bg-2 {
+  background-image: url('pic3.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+section {
+    height:500px;
+    padding-top:50px;
+    padding-bottom:50px;
+    overflow:auto;
+}
+
+
+.white{
+  color:white;
+}
+
+.gray{
+  color:gray;
+  text-align: center;
+}
+

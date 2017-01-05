@@ -5,7 +5,7 @@ class Appointment < ActiveRecord::Base
 
   validates :start_time, :topic, presence: true
 
-  validate :time_is_in_future
+  # validate :time_is_in_future
 
   def time_is_in_future
     if start_time < Time.now
