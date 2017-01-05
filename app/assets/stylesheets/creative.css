@@ -446,3 +446,43 @@ hr {
     border-style: inset;
     border-width: 1px;
 }
+
+.bg-1 {
+  background-image: url('pic.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.bg-2 {
+  background-image: url('pic3.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+section {
+    height:500px;
+    padding-top:50px;
+    padding-bottom:50px;
+    overflow:auto;
+}
+
+
+.white{
+  color:white;
+}
+
+.gray{
+  color:gray;
+  text-align: center;
+}
+
