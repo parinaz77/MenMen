@@ -7,23 +7,34 @@
 <br>
 <br>
 <br>
+<!-- <div class="container"> -->
+<div class="im-centered">
+<div class="row">
 
-<% if @user.user_type == 'mentor' %>
-<div class="well">
- <h3><strong>Upcoming Appointments:</strong></h3>
-  <% @user.mentor_sessions.each do |mentor_session| %>
-    <% if mentor_session.start_time.future? %>
-      <ul>
-          <li>
-          Start time: <%= link_to mentor_session.start_time, user_appointment_path(@user.id,mentor_session.id) %>
-          End time: <%= mentor_session.start_time + 30.minutes %>
-        </li>
-      </ul>
+  <% if @user.user_type == 'mentor' %>
+  
+  <div class="col-md-4">
+  <!-- <div class="panel panel-default"> -->
+  <div class="well">
+   <h3><strong>Upcoming Appointments:</strong></h3>
+    <% @user.mentor_sessions.each do |mentor_session| %>
+      <% if mentor_session.start_time.future? %>
+        <ul>
+            <li>
+            Start time: <%= link_to mentor_session.start_time, user_appointment_path(@user.id,mentor_session.id) %>
+            End time: <%= mentor_session.start_time + 30.minutes %>
+          </li>
+        </ul>
+      <% end %>
     <% end %>
-  <% end %>
-</div>
-<br>
-<div class="well">
+  </div>
+  </div>
+  <!-- </div> -->
+  
+
+  <div class="col-md-4">
+  <!-- <div class="panel panel-default"> -->
+  <div class="well">
     <h3><strong>Past Appointments:</strong></h3>
     <% @user.mentor_sessions.each do |mentor_session| %>
       <% if !mentor_session.start_time.future? %>
@@ -35,7 +46,14 @@
       </ul>
       <% end %>
     <% end %>
+  </div>
+  </div>
+  <!-- </div> -->
+
 </div>
+</div>
+<!-- </div> -->
+
 <br>
 <br>
 <br>
@@ -63,17 +81,18 @@
 
 <% else %>
 
-<h3><strong>Upcoming Appointments:</strong></h3>
-  <% @user.study_sessions.each do |study_session| %>
-    <% if study_session.start_time.future? %>
-      <ul>
-          <li>
-          Start time: <%= link_to study_session.start_time, user_appointment_path(@user.id,study_session.id) %>
-          End time: <%= study_session.start_time + 30.minutes %>
-        </li>
-      </ul>
+  <h3><strong>Upcoming Appointments:</strong></h3>
+    <% @user.study_sessions.each do |study_session| %>
+      <% if study_session.start_time.future? %>
+        <ul>
+            <li>
+            Start time: <%= link_to study_session.start_time, user_appointment_path(@user.id,study_session.id) %>
+            End time: <%= study_session.start_time + 30.minutes %>
+          </li>
+        </ul>
+      <% end %>
     <% end %>
-  <% end %>
+
 
     <h3><strong>Past Appointments:</strong></h3>
     <% @user.study_sessions.each do |study_session| %>
@@ -86,6 +105,7 @@
       </ul>
       <% end %>
     <% end %>
+
   <br>
   <br>
   
