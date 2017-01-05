@@ -11,23 +11,21 @@
   		
 				  <li><%= button_to "Calendar", calendars_path,method: "get", :class => 'navbar-link', :class => "btn btn-sm btn-margin-left" %></li>
 				  
-				  <!-- <ul class="nav navbar-nav navbar-right">
-      		<li><a href="#">Right</a></li>
-      	</ul> -->
-
-				  <!-- <li class="pull-right">Logged in as: <strong><%= current_user.email %></strong>(<%= current_user.user_type %>)</li> -->
-
-				  <!-- <td class="btn btn-danger navbar-btn"> -->	
 				  <li><%= button_to "Logout", session_path(current_user.id), method: "delete", :class => 'navbar-link', :class => "btn btn-sm btn-margin-left" %></li>
 
 				  
 				   <p class="navbar-text nav navbar-nav navbar-right">Signed in as <a href="#" class="navbar-link"><strong><%= current_user.email %></strong>(<%= current_user.user_type %>)</a></p>
+				</ul>
 				<% else %>
-				  <li class="navbar-left"><%= button_to "Sign up", new_user_path, method: "get", :class => 'navbar-link', :class => "btn btn-sm btn-margin-left" %></li>
+				<ul class="nav navbar-nav">
+				  <li><%= button_to "Sign up", new_user_path, method: "get", :class => 'navbar-link', :class => "btn btn-sm btn-margin-left" %></li>
 
-				  <li class="navbar-left"><%= button_to "Login", new_session_path, method: "get", :class => 'navbar-link', :class => "btn btn-sm btn-margin-left" %></li>
+				  <li><%= button_to "Login", new_session_path, method: "get", :class => 'navbar-link', :class => "btn btn-sm btn-margin-left" %></li>
 				  </ul>
 				<% end %>
+
+				<!-- <a class="navbar-brand" href="#">Brand</a>    		 -->
+
 
 			</div>
 		</div>
