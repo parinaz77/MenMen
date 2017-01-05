@@ -3739,13 +3739,27 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   margin-bottom: 0;
   border-width: 1px 0 0;
 }
-.navbar-brand {
+/*.navbar-brand {
   float: left;
   height: 50px;
   padding: 15px 15px;
   font-size: 18px;
   line-height: 20px;
+}*/
+/**/
+.navbar-brand {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    top: 0;
+    text-align: center;
+    margin-top: -90px;
+    transform: translateX(-50%);
 }
+.navbar-toggle {
+    z-index:3;
+}
+/**/
 .navbar-brand:hover,
 .navbar-brand:focus {
   text-decoration: none;
