@@ -3,6 +3,8 @@
 * MenMen is an online scheduler. Students can login and select the avaialble office hours open with any teacher they choose. Teachers can login and create office hours for students to register.
 
 ![pic1](/public/assets/pic1.png)
+![pic2](/public/assets/pic2.png)
+![pic3](/public/assets/pic3.png)
 
 
 # Authored by
