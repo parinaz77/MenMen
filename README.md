@@ -1,10 +1,13 @@
 # [MenMen] ()
 
+
+# Description
 * MenMen is an online scheduler. Students can login and select the avaialble office hours open with any teacher they choose. Teachers can login and create office hours for students to register.
 
 ![pic1](/public/assets/pic1.png)
-
+```
 * When students go to calnedar, they can see list of all the sessions and the ones that are still open will have a sign-up button to click on. 
+```
 ![pic2](/public/assets/pic2.png)
 
 
@@ -19,6 +22,13 @@
 * [Victor Matthews] (https://github.com/vic6)
 * [Dawit Hailu] (https://github.com/dawit-hailu)
 * [Ashley] (https://github.com/Von-Ashley)
+
+# Technologies Used
+* Ruby on Rails
+* PostgreSQL
+* Bootstrap
+* simple calendar
+
 
 
 
